@@ -110,7 +110,7 @@ jobs:
     - name: Feed Add Update Install
       run: |
         cd openwrt
-        chmod -R +x "${PATH_Diyscript}/diy_script"
+        chmod -R +x "${PATH_Diyscript}"
         source ${PATH_Diyscript}/Add_a_third_party_feed.sh
         source ${PATH_Diyscript}/Add_third_party_software.sh
       
