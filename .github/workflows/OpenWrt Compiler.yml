@@ -93,12 +93,12 @@ jobs:
         sudo chown $USER:$GROUPS /${{matrix.target}}
     
     - name: Clone Source Code
-      working-directory: /${{matrix.target}}
+      working-directory: /workdir
       run: |
         git clone -b "$REPO_BRANCH" --single-branch "$REPO_URL" openwrt
         cd openwrt
         ./scripts/feeds update -a > /dev/null 2>&1
-        ln -sf /${{matrix.target}}/openwrt $GITHUB_WORKSPACE/openwrt
+        ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
         echo "Home=${GITHUB_WORKSPACE}/openwrt" >> $GITHUB_ENV
         echo "PATH_Package=${GITHUB_WORKSPACE}/config/app_config" >> $GITHUB_ENV
         echo "PATH_Device=${GITHUB_WORKSPACE}/config/device_config" >> $GITHUB_ENV
