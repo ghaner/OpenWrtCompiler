@@ -44,7 +44,7 @@ jobs:
 
     - name: Assign Environment Variables
       run: |
-        source "${GITHUB_WORKSPACE}/build/${{matrix.target}}/ENV.ini"
+        source "${GITHUB_WORKSPACE}/script/diy_script/ENV.ini"
         echo "REPO_URL=${REPO_URL}" >> $GITHUB_ENV
         echo "REPO_BRANCH=${REPO_BRANCH}" >> $GITHUB_ENV
         
@@ -100,15 +100,18 @@ jobs:
         ./scripts/feeds update -a > /dev/null 2>&1
         ln -sf /${{matrix.target}}/openwrt $GITHUB_WORKSPACE/openwrt
         echo "Home=${GITHUB_WORKSPACE}/openwrt" >> $GITHUB_ENV
-        echo "PATH1=${GITHUB_WORKSPACE}/build/${{matrix.target}}" >> $GITHUB_ENV
-        echo "PATH2=${GITHUB_WORKSPACE}/build/common" >> $GITHUB_ENV
+        echo "PATH_Package=${GITHUB_WORKSPACE}/config/app_config" >> $GITHUB_ENV
+        echo "PATH_Device=${GITHUB_WORKSPACE}/config/device_config" >> $GITHUB_ENV
+        echo "PATH_Custom=${GITHUB_WORKSPACE}/custom_files" >> $GITHUB_ENV
+        echo "PATH_Comscript=${GITHUB_WORKSPACE}/script/com_script" >> $GITHUB_ENV
+        echo "PATH_Diyscript=${GITHUB_WORKSPACE}/script/diy_script" >> $GITHUB_ENV
        
     - name: Feed Add Update Install
       run: |
         cd openwrt
-        chmod -R +x "${PATH1}/diy_script"
-        source ${PATH1}/diy_script/Add_a_third_party_feed.sh
-        source ${PATH1}/diy_script/Add_third_party_software.sh
+        chmod -R +x "${PATH_Diyscript}/diy_script"
+        source ${PATH_Diyscript}/Add_a_third_party_feed.sh
+        source ${PATH_Diyscript}/Add_third_party_software.sh
       
         ./scripts/feeds update -a
         ./scripts/feeds install -a
@@ -119,22 +122,22 @@ jobs:
         cp -Rf `find ./ -maxdepth 1 -type d ! -path './openwrt' ! -path './'` openwrt 
        
         cd openwrt
-        chmod -R +x "${PATH2}/Script_Integrity.sh"
-        source "${PATH2}/Script_Integrity.sh"
-        chmod -R +x "${PATH1}/diy_script"
-        source ${PATH1}/diy_script/Delete_original_code.sh
-        source ${PATH1}/diy_script/Modify_default_config.sh
+        chmod -R +x "${PATH_Comscript}/Script_Integrity.sh"
+        source "${PATH_Comscript}/Script_Integrity.sh"
+        chmod -R +x "${PATH_Diyscript}"
+        source ${PATH_Diyscript}/Delete_original_code.sh
+        source ${PATH_Diyscript}/Modify_default_config.sh
 
-        mv "$PATH1/$CONFIG_FILE" .config
+        mv "${GITHUB_WORKSPACE}/config/$CONFIG_FILE" .config
         
-        if [ -n "$(ls -A "${PATH1}/custom_files/diy" 2>/dev/null)" ]; then
-            cp -Rf "${PATH1}"/custom_files/diy/* "${Home}"
+        if [ -n "$(ls -A "${GITHUB_WORKSPACE}/custom_files/diy" 2>/dev/null)" ]; then
+            cp -Rf "${GITHUB_WORKSPACE}"/custom_files/diy/* "${Home}"
         fi
-        if [ -n "$(ls -A "${PATH1}/custom_files/files" 2>/dev/null)" ]; then
-            cp -Rf "${PATH1}/custom_files/files" "${Home}" && chmod -R +x ${Home}/files
+        if [ -n "$(ls -A "${GITHUB_WORKSPACE}/custom_files/files" 2>/dev/null)" ]; then
+            cp -Rf "${GITHUB_WORKSPACE}/custom_files/files" "${Home}" && chmod -R +x ${Home}/files
         fi
-        if [ -n "$(ls -A "${PATH1}/custom_files/patches" 2>/dev/null)" ]; then
-            find "${PATH1}/custom_files/patches" -type f -name '*.patch' -print0 | sort -z | xargs -I % -t -0 -n 1 sh -c "cat '%'  | patch -d './' -p1 --forward --no-backup-if-mismatch"
+        if [ -n "$(ls -A "${GITHUB_WORKSPACE}/custom_files/patches" 2>/dev/null)" ]; then
+            find "${GITHUB_WORKSPACE}/custom_files/patches" -type f -name '*.patch' -print0 | sort -z | xargs -I % -t -0 -n 1 sh -c "cat '%'  | patch -d './' -p1 --forward --no-backup-if-mismatch"
         fi
     
     - name: Load the Cache
@@ -147,7 +150,7 @@ jobs:
     - name: Generate Configuration
       run: |
         cd openwrt
-        source "${PATH2}/Precompile.sh" > /dev/null 2>&1
+        source "${PATH_Comscript}/Precompile.sh" > /dev/null 2>&1
         make defconfig > /dev/null 2>&1
         ./scripts/diffconfig.sh > ${GITHUB_WORKSPACE}/config.txt
         echo "TARGET_BOARD=$(awk -F '[="]+' '/TARGET_BOARD/{print $2}' .config)" >> $GITHUB_ENV
@@ -166,13 +169,13 @@ jobs:
     - name: Compilation Information
       run: |
         cd openwrt
-        source "${PATH2}/Precompile.sh" > /dev/null 2>&1
+        source "${PATH_Comscript}/Precompile.sh" > /dev/null 2>&1
         if [ "${REGULAR_UPDATE}" == "true" ]; then
-          source "${PATH2}/In_Firmware_Info.sh" > /dev/null 2>&1
+          source "${PATH_Comscript}/In_Firmware_Info.sh" > /dev/null 2>&1
         fi
         if [ "${COMPILE_INFORMATION}" == "true" ]; then
-          source "${PATH2}/Get_Target_Info.sh"
-          source "${PATH2}/Compilation_Info.sh"
+          source "${PATH_Comscript}/Get_Target_Info.sh"
+          source "${PATH_Comscript}/Compilation_Info.sh"
           chmod -R 755 .
         fi
 
@@ -286,7 +289,7 @@ jobs:
       if: steps.compile.outputs.status == 'success' && env.REGULAR_UPDATE == 'true'
       run: |
        cd openwrt
-       source "${PATH2}/CloudsUpdate.sh"
+       source "${PATH_Comscript}/CloudsUpdate.sh"
         
     - name: CloudsUpdate 2
       if: steps.compile.outputs.status == 'success' && env.REGULAR_UPDATE == 'true' && env.REPO_TOKEN
