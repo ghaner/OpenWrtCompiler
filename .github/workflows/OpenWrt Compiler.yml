@@ -128,7 +128,7 @@ jobs:
         source ${PATH_Diyscript}/Delete_original_code.sh
         source ${PATH_Diyscript}/Modify_default_config.sh
 
-        mv "${GITHUB_WORKSPACE}/config/$CONFIG_FILE" .config
+        mv "${GITHUB_WORKSPACE}/$CONFIG_FILE" .config
         
         if [ -n "$(ls -A "${GITHUB_WORKSPACE}/custom_files/diy" 2>/dev/null)" ]; then
             cp -Rf "${GITHUB_WORKSPACE}"/custom_files/diy/* "${Home}"
