@@ -129,14 +129,14 @@ jobs:
         source ${PATH_Diyscript}/Device_config.sh
         source ${PATH_Diyscript}/Package_config.sh
         
-        if [ -n "$(ls -A "${GITHUB_WORKSPACE}/custom_files/diy" 2>/dev/null)" ]; then
-            cp -Rf "${GITHUB_WORKSPACE}"/custom_files/diy/* "${Home}"
+        if [ -n "$(ls -A "${PATH_Custom}/diy" 2>/dev/null)" ]; then
+            cp -Rf "${PATH_Custom}"/diy/* "${Home}"
         fi
-        if [ -n "$(ls -A "${GITHUB_WORKSPACE}/custom_files/files" 2>/dev/null)" ]; then
-            cp -Rf "${GITHUB_WORKSPACE}/custom_files/files" "${Home}" && chmod -R +x ${Home}/files
+        if [ -n "$(ls -A "${PATH_Custom}/files" 2>/dev/null)" ]; then
+            cp -Rf "${PATH_Custom}/files" "${Home}" && chmod -R +x ${Home}/files
         fi
-        if [ -n "$(ls -A "${GITHUB_WORKSPACE}/custom_files/patches" 2>/dev/null)" ]; then
-            find "${GITHUB_WORKSPACE}/custom_files/patches" -type f -name '*.patch' -print0 | sort -z | xargs -I % -t -0 -n 1 sh -c "cat '%'  | patch -d './' -p1 --forward --no-backup-if-mismatch"
+        if [ -n "$(ls -A "${PATH_Custom}/patches" 2>/dev/null)" ]; then
+            find "${PATH_Custom}/patches" -type f -name '*.patch' -print0 | sort -z | xargs -I % -t -0 -n 1 sh -c "cat '%'  | patch -d './' -p1 --forward --no-backup-if-mismatch"
         fi
     
     - name: Load the Cache
