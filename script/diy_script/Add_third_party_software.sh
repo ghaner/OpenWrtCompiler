@@ -24,17 +24,19 @@ TIME() {
 }
 
 #===========================================================================================================================
-# 第三方插件必须要先拉进仓库https://github.com/ghaner/openwrt-package,再由之作为唯一的feed,一般不在此处单独添加第三方插件.
+# 第三方插件必须要先拉进仓库https://github.com/ghaner/openwrt-package,再由之作为唯一的feed,除有条件的软件外不在此处单独添加第三方插件.
 # Add a third-party software:git clone -b branch-name software-url.git package/third-party-feed/software-name
 # Add a third-party software:git clone --depth=1 software-url package/third-party-feed/software-name
 # Add a third-party software:svn co software-url(/trunk or branch/branch-name/software-name) package/third-party-feed/software-name
-#----------------------------------------------------------------------------------------------------------------------------
-
+#---------------------------------------------------------------------------------------------------------------------------
 #echo
 #TIME y "添加 third-party software:"
-
-#echo
-#TIME y "添加 third-party software:"
+#if [[ ${REGULAR_UPDATE} == "true" ]]; then
+#    echo
+#    TIME y "添加 luci-app-autoupdate:"
+#    git clone https://github.com/mdtycl/luci-app-autoupdate feeds/luci/applications/luci-app-autoupdate
+#fi
+#TIME y "添加 third-party software 结束"
 #echo
 #TIME y "添加 flowoffload"
 #git clone https://github.com/deplives/luci-app-flowoffload package/third-party-feed/luci-app-flowoffload
