@@ -98,7 +98,7 @@ TIME z "  使用 核心数 为 [ ${CPUCORES} ], 线程数为 [ $(nproc) ]"
 echo
 TIME z "  CPU编译速度:8370C>8272CL>8171M>E5系列"
 echo
-TIME z "  如果编译的插件较多，而又分配到 E5系列 的 CPU，建议关闭 重新再来！"
+TIME z "  如果编译的插件较多，而又分配到E5系列的CPU，建议关闭 重新再来！"
 echo
 TIME z "  下面将使用 [ $(nproc) 线程 ] 编译固件"
 echo
