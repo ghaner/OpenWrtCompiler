@@ -27,9 +27,7 @@ Compte=$(date +%Y年%m月%d号%H时%M分)
 # 编译信息
 ################################################################################################################
 
-if [[ "${TARGET_PROFILE}" =~ (friendlyarm_nanopi-r2s|friendlyarm_nanopi-r4s|armvirt) ]]; then
-	REGULAR_UPDATE="false"
-fi
+
 echo
 TIME b "编译源码: ${CODE}"
 TIME b "源码链接: ${REPO_URL}"
