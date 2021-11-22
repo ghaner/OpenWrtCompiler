@@ -91,11 +91,9 @@ jobs:
       run: |
         git clone -b "$REPO_BRANCH" --single-branch "$REPO_URL" openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
-        ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
-
+       
         cd openwrt
         ./scripts/feeds update -a > /dev/null 2>&1
-        
         
         echo "Home=${GITHUB_WORKSPACE}/openwrt" >> $GITHUB_ENV
         echo "PATH_Custom=${GITHUB_WORKSPACE}/custom_files" >> $GITHUB_ENV
