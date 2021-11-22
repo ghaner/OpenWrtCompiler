@@ -38,14 +38,7 @@ echo
 TIME b "空置登录密码"
 sed -i "/CYXluq4wUazHjmCDBCqXF/d" package/lean/default-settings/files/zzz-default-settings
 
-if [[ ${REGULAR_UPDATE} == "true" ]]; then
-    echo
-    TIME b "固件更新设置"
-    cp -Rf "${PATH_Comscript}"/{AutoUpdate.sh,replace.sh} package/base-files/files/bin
-    sed -i 's/"定时更新"/"更新固件"/g' feeds/luci/applications/luci-app-autoupdate/po/zh-cn/autoupdate.po
-    sed -i 's/定时更新 LUCI/固件更新 LUCI/g' feeds/luci/applications/luci-app-autoupdate/po/zh-cn/autoupdate.po
-    sed -i 's/DEFAULT_PACKAGES +=/DEFAULT_PACKAGES += luci-app-autoupdate luci-app-ttyd/g' target/linux/*/Makefile
-fi
+
 
 
 TIME b "Modify default config 结束"
