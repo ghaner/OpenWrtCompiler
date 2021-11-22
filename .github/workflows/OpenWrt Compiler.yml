@@ -47,7 +47,6 @@ jobs:
         source "${GITHUB_WORKSPACE}/script/diy_script/ENV.ini"
         echo "REPO_URL=${REPO_URL}" >> $GITHUB_ENV
         echo "REPO_BRANCH=${REPO_BRANCH}" >> $GITHUB_ENV
-        #echo "CONFIG_FILE=${CONFIG_FILE}" >> $GITHUB_ENV
         echo "COMPILE_INFORMATION=${COMPILE_INFORMATION}" >> $GITHUB_ENV
         echo "UPLOAD_CONFIG=${UPLOAD_CONFIG}" >> $GITHUB_ENV
         echo "UPLOAD_BIN_DIR=${UPLOAD_BIN_DIR}" >> $GITHUB_ENV
@@ -55,10 +54,7 @@ jobs:
         echo "UPLOAD_COWTRANSFER=${UPLOAD_COWTRANSFER}" >> $GITHUB_ENV
         echo "UPLOAD_WETRANSFER=${UPLOAD_WETRANSFER}" >> $GITHUB_ENV
         echo "UPLOAD_RELEASE=${UPLOAD_RELEASE}" >> $GITHUB_ENV
-        
-        echo "SERVERCHAN_SCKEY=${SERVERCHAN_SCKEY}" >> $GITHUB_ENV
         echo "CACHE_BUILD=${CACHE_BUILD}" >> $GITHUB_ENV
-        
         echo "CangKu=${Apidz##*/}" >> $GITHUB_ENV
         echo "Modelfile=${{matrix.target}}" >> $GITHUB_ENV
        
@@ -92,15 +88,14 @@ jobs:
         sudo chown $USER:$GROUPS /${{matrix.target}}
     
     - name: Clone Source Code
-      
       run: |
         git clone -b "$REPO_BRANCH" --single-branch "$REPO_URL" openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
         cd openwrt
         ./scripts/feeds update -a > /dev/null 2>&1
+        
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
         echo "Home=${GITHUB_WORKSPACE}/openwrt" >> $GITHUB_ENV
-        
         echo "PATH_Custom=${GITHUB_WORKSPACE}/custom_files" >> $GITHUB_ENV
         echo "PATH_Comscript=${GITHUB_WORKSPACE}/script/com_script" >> $GITHUB_ENV
         echo "PATH_Diyscript=${GITHUB_WORKSPACE}/script/diy_script" >> $GITHUB_ENV
