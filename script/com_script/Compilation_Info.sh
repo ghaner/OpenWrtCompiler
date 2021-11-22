@@ -84,37 +84,10 @@ if [[ ${UPLOAD_RELEASE} == "true" ]]; then
 else
 	TIME r "发布固件: 关闭"
 fi
-if [[ ${SERVERCHAN_SCKEY} == "true" ]]; then
-	TIME y "电报通知: 开启"
-else
-	TIME r "电报通知: 关闭"
-fi
-if [[ ${COMPILE_INFORMATION} == "true" ]]; then
-	TIME y "编译信息显示: 开启"
-fi
-if [[ ${REGULAR_UPDATE} == "true" ]]; then
-	TIME y "把定时自动更新功能编译进固件: 开启"
-else
-	TIME r "把定时自动更新功能编译进固件: 关闭"
-fi
-if [[ ${REGULAR_UPDATE} == "true" ]]; then
-	echo
-	TIME l "定时自动更新信息"
-	TIME z "插件版本: ${AutoUpdate_Version}"
-	if [[ ${TARGET_PROFILE} == "x86-64" ]]; then
-		TIME b "传统固件: ${Legacy_Firmware}"
-		TIME b "UEFI固件: ${UEFI_Firmware}"
-		TIME b "固件后缀: ${Firmware_sfx}"
-	else
-		TIME b "固件名称: ${Up_Firmware}"
-		TIME b "固件后缀: ${Firmware_sfx}"
-	fi
-	TIME b "固件版本: ${Openwrt_Version}"
-	TIME b "云端路径: ${Github_UP_RELEASE}"
-	
-else
-	echo
-fi
+
+
+
+
 echo
 TIME z " 系统空间      类型   容量  已用  可用 使用率"
 cd ../ && df -hT $PWD && cd openwrt
