@@ -3,6 +3,12 @@
 # AutoBuild Module by Hyy2001
 # AutoBuild Functions
 # 在 cat >> .config <<EOF 到 EOF 之间粘贴配置
+# 需要配置的非原生源码默认package:
+CONFIG_PACKAGE_PACKAGE-name=y
+
+禁止原生源码默认package配置:
+CONFIG_DEFAULT_luci-app-ramfree=
+
 
 cat >> .config <<EOF
 #KERNEL_BUILD
