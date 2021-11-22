@@ -30,13 +30,9 @@ TIME() {
 # Add a third-party software:svn co software-url(/trunk or branch/branch-name/software-name) package/third-party-feed/software-name
 #----------------------------------------------------------------------------------------------------------------------------
 
-echo
-TIME y "添加 third-party software:"
-if [[ ${REGULAR_UPDATE} == "true" ]]; then
-    echo
-    TIME y "添加 luci-app-autoupdate:"
-    git clone https://github.com/mdtycl/luci-app-autoupdate feeds/luci/applications/luci-app-autoupdate
-fi
+#echo
+#TIME y "添加 third-party software:"
+
 #echo
 #TIME y "添加 third-party software:"
 #echo
