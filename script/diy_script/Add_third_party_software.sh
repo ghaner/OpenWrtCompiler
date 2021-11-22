@@ -77,5 +77,5 @@ TIME() {
 #TIME y "添加 网络测速"
 #git clone https://github.com/sirpdboy/NetSpeedTest package/NetSpeedTest
 
-TIME y "添加 third-party software 结束"
+#TIME y "添加 third-party software 结束"
 #----------------------------------------------------------------------------------------------------------
