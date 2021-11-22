@@ -55,15 +55,8 @@ CONFIG_PACKAGE_wget-ssl=y
 
 #application:
 ##system:
-#CONFIG_PACKAGE_luci-app-autotimeset=y
-
-#CONFIG_PACKAGE_luci-app-autoupdate=y
-
 CONFIG_PACKAGE_luci-app-filebrowser=y
-CONFIG_PACKAGE_luci-app-filetransfer=Y
-
-
-
+CONFIG_PACKAGE_luci-app-filetransfer=y
 CONFIG_PACKAGE_luci-app-ttyd=y
 
 ##services:
@@ -72,16 +65,18 @@ CONFIG_PACKAGE_luci-app-godproxy=y
 CONFIG_PACKAGE_luci-app-jd-dailybonus=y
 CONFIG_PACKAGE_luci-app-openclash=y
 CONFIG_PACKAGE_luci-app-unblockmusic=y
-#CONFIG_PACKAGE_luci-app-vssr=y
+
 
 ##network:
 CONFIG_PACKAGE_luci-app-firewall=y
-#CONFIG_PACKAGE_luci-app-guest-wifi=y
-#CONFIG_DEFAULT_luci-app-flowoffload=y
-#CONFIG_PACKAGE_luci-app-syncdial=y
 CONFIG_PACKAGE_luci-app-turboacc=y
 
-#block default:
+# LuCI-theme
+CONFIG_DEFAULT_luci-theme-bootstrap=y
+CONFIG_PACKAGE_luci-theme-infinityfreedom=y
+
+
+#block default PACKAGE:
 
 CONFIG_PACKAGE_adbyby=n
 CONFIG_PACKAGE_autosamba=n
@@ -95,7 +90,6 @@ CONFIG_PACKAGE_luci-app-ddns=n
 CONFIG_PACKAGE_luci-app-nlbwmon=n
 CONFIG_PACKAGE_luci-app-samba4=n
 #CONFIG_DEFAULT_luci-app-ssr-plus=n
-
 CONFIG_PACKAGE_luci-app-vlmcsd=n
 CONFIG_PACKAGE_luci-app-ipsec-vpnd=n
 CONFIG_PACKAGE_luci-app-upnp=n
@@ -105,7 +99,5 @@ CONFIG_PACKAGE_luci-app-zerotier=n
 CONFIG_PACKAGE_vsftpd-alt=n
 CONFIG_PACKAGE_wol=n
 
-# LuCI-theme
-CONFIG_DEFAULT_luci-theme-bootstrap=y
-CONFIG_PACKAGE_luci-theme-infinityfreedom=y
+
 EOF
