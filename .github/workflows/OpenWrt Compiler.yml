@@ -100,8 +100,7 @@ jobs:
         ./scripts/feeds update -a > /dev/null 2>&1
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
         echo "Home=${GITHUB_WORKSPACE}/openwrt" >> $GITHUB_ENV
-        echo "PATH_Package=${GITHUB_WORKSPACE}/config/app_config" >> $GITHUB_ENV
-        echo "PATH_Device=${GITHUB_WORKSPACE}/config/device_config" >> $GITHUB_ENV
+        
         echo "PATH_Custom=${GITHUB_WORKSPACE}/custom_files" >> $GITHUB_ENV
         echo "PATH_Comscript=${GITHUB_WORKSPACE}/script/com_script" >> $GITHUB_ENV
         echo "PATH_Diyscript=${GITHUB_WORKSPACE}/script/diy_script" >> $GITHUB_ENV
