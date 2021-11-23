@@ -123,7 +123,7 @@ jobs:
         #mv "${GITHUB_WORKSPACE}/$CONFIG_FILE" .config
         source ${PATH_Diyscript}/Device_config.sh
         source ${PATH_Diyscript}/Package_config.sh
-        
+        source ${PATH_Diyscript}/Adjust_menu_position.sh
         if [ -n "$(ls -A "${PATH_Custom}/diy" 2>/dev/null)" ]; then
             cp -Rf "${PATH_Custom}"/diy/* "${Home}"
         fi
