@@ -2,8 +2,29 @@
 # https://github.com/Hyy2001X/AutoBuild-Actions
 # AutoBuild Module by Hyy2001
 # AutoBuild Functions
-# 在 cat >> .config <<EOF 到 EOF 之间粘贴配置
-
+#==========================================================================================================
+TIME() {
+[[ -z "$1" ]] && {
+	echo -ne " "
+} || {
+     case $1 in
+	r) export Color="\e[31;1m";;
+	g) export Color="\e[32;1m";;
+	b) export Color="\e[34;1m";;
+	y) export Color="\e[33;1m";;
+	z) export Color="\e[35;1m";;
+	l) export Color="\e[36;1m";;
+      esac
+	[[ $# -lt 2 ]] && echo -e "\e[36m\e[0m ${1}" || {
+		echo -e "\e[36m\e[0m ${Color}${2}\e[0m"
+	 }
+      }
+}
+#==========================================================================================================
+# 在 cat >> .config <<EOF 到 EOF 之间粘贴配置 同时注释到其他路由器型号
+#-----------------------------------------------------------------------------------------------------------
+echo
+TIME r "载入路由器型号:"
 cat >> .config <<EOF
 #MODULES:
 CONFIG_TARGET_ipq40xx=y
@@ -113,3 +134,4 @@ EOF
 # CONFIG_TARGET_ARCH_PACKAGES="arm_cortex-a7_neon-vfpv4"
 # CONFIG_DEFAULT_TARGET_OPTIMIZATION="-Os -pipe"
 # CONFIG_CPU_TYPE="cortex-a7+neon-vfpv4"
+TIME r "路由器型号载入完成"
