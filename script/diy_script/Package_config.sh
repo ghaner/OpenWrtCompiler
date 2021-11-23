@@ -28,7 +28,7 @@ TIME() {
 # CONFIG_DEFAULT_PACKAGE-name=n
 #-----------------------------------------------------------------------------------------------------------
 echo
-TIME r "开始选择安装的插件::
+TIME r "开始选择安装的插件:"
 
 cat >> .config <<EOF
 #KERNEL_BUILD
@@ -127,3 +127,4 @@ CONFIG_PACKAGE_wol=n
 
 
 EOF
+TIME r "选择安装的插件完成"
