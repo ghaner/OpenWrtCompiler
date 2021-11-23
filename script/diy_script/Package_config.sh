@@ -2,12 +2,33 @@
 # https://github.com/Hyy2001X/AutoBuild-Actions
 # AutoBuild Module by Hyy2001
 # AutoBuild Functions
+#==========================================================================================================
+TIME() {
+[[ -z "$1" ]] && {
+	echo -ne " "
+} || {
+     case $1 in
+	r) export Color="\e[31;1m";;
+	g) export Color="\e[32;1m";;
+	b) export Color="\e[34;1m";;
+	y) export Color="\e[33;1m";;
+	z) export Color="\e[35;1m";;
+	l) export Color="\e[36;1m";;
+      esac
+	[[ $# -lt 2 ]] && echo -e "\e[36m\e[0m ${1}" || {
+		echo -e "\e[36m\e[0m ${Color}${2}\e[0m"
+	 }
+      }
+}
+#==========================================================================================================
 # 在 cat >> .config <<EOF 到 EOF 之间粘贴配置
 # 需要配置的非原生源码默认package:
 # CONFIG_PACKAGE_PACKAGE-name=y
 # 禁止原生源码默认package配置:
 # CONFIG_DEFAULT_PACKAGE-name=n
-
+#-----------------------------------------------------------------------------------------------------------
+echo
+TIME r "开始选择安装的插件::
 
 cat >> .config <<EOF
 #KERNEL_BUILD
