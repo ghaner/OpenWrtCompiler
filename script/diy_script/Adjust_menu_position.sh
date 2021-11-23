@@ -32,12 +32,12 @@ TIME() {
 #sed -i 's/invalid/## invalid/g' feeds/packages/net/samba4/files/smb.conf.template
 #=================================================================================================================================
 # 软件菜单位置调整:sed -i 's/\"现处菜单\"/\"拟处菜单\"/g' package/lean/luci-app-software/luasrc目录下含有现处菜单名称的.lua .htm文件
-# 菜单名称:参考浏览器位置栏内名称
+# 菜单及软件名称:参考浏览器位置栏内名称
 #----------------------------------------------------------------------------------------------------------------------------------
-#echo
-#TIME b "adjust_menu_position"
-#TIME b "调整 网络共享 到 存储菜单"
-#sed -i 's/\"services\"/\"nas\"/g' package/lean/luci-app-samba4/luasrc/controller/samba4.lua
+echo
+TIME b "adjust_menu_position:"
+TIME b "调整 cpufreq 到 system菜单"
+sed -i 's/\"services\"/\"system\"/g' package/lean/luci-app-cpufreq/luasrc/controller/cpufreq.lua
 #TIME b "调整 分流助手 到 网络菜单"
 #sed -i 's/\"services\"/\"network\"/g' package/lean/luci-app-mwan3helper/luasrc/controller/mwan3helper.lua
 #curl -fsSL https://raw.githubusercontent.com/gd0772/patch/main/mwan3helper_status.htm > ./package/lean/luci-app-mwan3helper/luasrc/view/mwan3helper/mwan3helper_status.htm
@@ -81,4 +81,4 @@ TIME() {
 #sed -i 's/services/nas/g' package/lean/luci-app-aliyundrive-webdav/luasrc/model/cbi/aliyundrive-webdav/*.lua
 #sed -i 's/services/nas/g' package/lean/luci-app-aliyundrive-webdav/luasrc/view/aliyundrive-webdav/*.htm
 
-#TIME b "adjust_menu_position 结束"
+TIME b "adjust_menu_position 结束"
