@@ -102,7 +102,7 @@ CONFIG_DEFAULT_luci-theme-bootstrap=y
 CONFIG_PACKAGE_luci-theme-infinityfreedom=y
 
 
-#block default PACKAGE:
+#block default PACKAGE:CONFIG_PACKAGE_PACKAGE-name=n
 
 CONFIG_PACKAGE_adbyby=n
 CONFIG_PACKAGE_autosamba=n
