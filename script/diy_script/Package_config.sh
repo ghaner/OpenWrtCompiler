@@ -41,7 +41,7 @@ CONFIG_PACKAGE_ip6tables=y
 CONFIG_PACKAGE_ipv6helper=y
 # 增减插件时同步增减feed中相同插件的同步 https://github.com/ghaner/openwrt-package/blob/main/.github/workflows/Package%20updater.yml
 # dependencies:
-CONFIG_BUSYBOX_DEFAULT_FEATURE_WGET_HTTPS=y
+
 CONFIG_PACKAGE_bash=y
 CONFIG_PACKAGE_ca-bundle=y
 CONFIG_PACKAGE_ca-certificates=y
