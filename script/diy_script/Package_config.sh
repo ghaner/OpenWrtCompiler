@@ -68,6 +68,8 @@ CONFIG_PACKAGE_lua-openssl=y
 CONFIG_PACKAGE_luci=y
 CONFIG_PACKAGE_luci-base=y
 CONFIG_PACKAGE_luci-compat=y
+CONFIG_PACKAGE_luci-lib-fs=y
+
 CONFIG_PACKAGE_openssl-util=y
 CONFIG_PACKAGE_ruby=y
 CONFIG_PACKAGE_ruby-yaml=y
