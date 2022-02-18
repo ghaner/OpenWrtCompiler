@@ -88,7 +88,9 @@ CONFIG_PACKAGE_wget-ssl=y
 #application:
 ##system:
 CONFIG_PACKAGE_luci-app-filebrowser=y
-CONFIG_PACKAGE_luci-app-filetransfer=y
+CONFIG_PACKAGE_luci-app-fileassistant=y
+
+#CONFIG_PACKAGE_luci-app-filetransfer=y
 CONFIG_PACKAGE_luci-app-ttyd=y
 
 ##services:
