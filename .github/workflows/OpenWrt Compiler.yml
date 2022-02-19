@@ -155,7 +155,7 @@ jobs:
     - name: Compilation Information
       run: |
         cd openwrt
-        source "${PATH_Comscript}/Precompile.sh" > /dev/null 2>&1
+        source "${PATH_Comscript}/Precompile.sh" 
         
         if [ "${COMPILE_INFORMATION}" == "true" ]; then
           source "${PATH_Comscript}/Get_Target_Info.sh"
