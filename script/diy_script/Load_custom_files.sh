@@ -33,11 +33,11 @@ TIME() {
 #----------------------------------------------------------------------------------------------------------
 
 echo
-TIME b "开始加载custom files:"
-TIME b "开始加载etc/config:"
-TIME b "加载filebrowser"
-TIME b "加载openclash"
-TIME b "加载turboacc"
+TIME r "开始加载custom files:"
+TIME r "开始加载etc/config:"
+TIME r "加载filebrowser"
+TIME r "加载openclash"
+TIME r "加载turboacc"
 TIME b "开始加载etc/openclash/"
 TIME b "开始加载etc/filebrowser.db/"
 
