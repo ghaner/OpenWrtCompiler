@@ -158,7 +158,7 @@ jobs:
         
         
         if [ "${COMPILE_INFORMATION}" == "true" ]; then
-          
+          source "${PATH_Comscript}/Get_Target_Info.sh"
           source "${PATH_Comscript}/Compilation_Info.sh"
           chmod -R 755 .
         fi
