@@ -134,7 +134,7 @@ CONFIG_PACKAGE_luci-app-adbyby-plus=n
 CONFIG_PACKAGE_luci-app-arpbind=n
 CONFIG_PACKAGE_luci-app-autoreboot=n
 CONFIG_PACKAGE_luci-app-ddns=n
-CONFIG_PACKAGE_luci-app-filetransfer=n
+
 CONFIG_PACKAGE_luci-app-nlbwmon=n
 CONFIG_PACKAGE_luci-app-samba4=n
 #CONFIG_DEFAULT_luci-app-ssr-plus=n
