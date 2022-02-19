@@ -1,0 +1,9 @@
+
+config unblockmusic
+	option endpoint 'http://music.163.com'
+	option apptype 'go'
+	option enabled '1'
+	option musicapptype 'default'
+	option search_limit '0'
+	option flac_enabled '1'
+
