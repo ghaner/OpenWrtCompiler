@@ -29,6 +29,19 @@ TIME() {
 #-----------------------------------------------------------------------------------------------------------
 echo
 TIME r "开始选择安装的插件:"
+TIME r "选择luci-app-filebrowser"
+TIME r "选择luci-app-fileassistant"
+TIME r "选择luci-app-filetransfer"
+TIME r "选择luci-app-ttyd"
+TIME r "选择luci-app-adguardhome"
+TIME r "选择luci-app-ikoolproxy"
+TIME r "选择luci-app-openclash"
+TIME r "选择luci-app-unblockmusic"
+TIME r "选择luci-app-firewall"
+TIME r "选择luci-app-turboacc"
+TIME r "选择luci-theme-bootstrap"
+TIME r "选择luci-theme-infinityfreedom"
+
 
 cat >> .config <<EOF
 #KERNEL_BUILD
