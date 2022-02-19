@@ -28,17 +28,19 @@ TIME() {
 #-----------------------------------------------------------------------------------------------------------
 
 echo
+TIME r "Delete original code:"
+
 #TIME r "删除无用主题"
 #rm -rf ./feeds/freifunk/themes
 #rm -rf ./package/lean/luci-theme-argon
 #rm -rf ./feeds/luci/themes/luci-theme-material
-TIME r "删除源码中与third-party feed重复的插件:"
+#TIME r "删除源码中与third-party feed重复的插件:"
 #rm -rf ./feeds/packages/net/smartdns
 #rm -rf ./feeds/packages/admin/netdata
 #rm -rf ./package/lean/luci-app-netdata
 
-TIME r "-删除luci-app-jd-dailybonus"
-rm -rf ./package/lean/luci-app-jd-dailybonus
+#TIME r "-删除luci-app-jd-dailybonus"
+#rm -rf ./package/lean/luci-app-jd-dailybonus
 #rm -rf ./feeds/luci/applications/luci-app-rp-pppoe-server
 #rm -rf ./package/lean/luci-app-usb-printer
 TIME r "Delete original code 结束"
