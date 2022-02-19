@@ -152,7 +152,17 @@ jobs:
           echo "TARGET_PROFILE=armvirt" >> $GITHUB_ENV
         fi
 
-    
+        - name: Compilation Information
+        run: |
+        cd openwrt
+        
+        
+        if [ "${COMPILE_INFORMATION}" == "true" ]; then
+          
+          source "${PATH_Comscript}/Compilation_Info.sh"
+          chmod -R 755 .
+        fi
+
 
     - name: Download Package
       id: package
