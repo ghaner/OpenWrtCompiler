@@ -36,7 +36,7 @@ TIME() {
 #----------------------------------------------------------------------------------------------------------------------------------
 echo
 TIME b "adjust_menu_position:"
-TIME b "调整 cpufreq 到 system菜单"
+#TIME b "调整 cpufreq 到 system菜单"
 #sed -i 's/\"services\"/\"system\"/g' package/lean/luci-app-cpufreq/luasrc/controller/cpufreq.lua
 #TIME b "调整 分流助手 到 网络菜单"
 #sed -i 's/\"services\"/\"network\"/g' package/lean/luci-app-mwan3helper/luasrc/controller/mwan3helper.lua
