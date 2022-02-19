@@ -31,7 +31,7 @@ echo
 TIME r "开始选择安装的插件:"
 TIME r "选择luci-app-filebrowser"
 TIME r "选择luci-app-fileassistant"
-TIME r "选择luci-app-filetransfer"
+#TIME r "选择luci-app-filetransfer"
 TIME r "选择luci-app-ttyd"
 TIME r "选择luci-app-adguardhome"
 TIME r "选择luci-app-ikoolproxy"
@@ -103,7 +103,7 @@ CONFIG_PACKAGE_wget-ssl=y
 CONFIG_PACKAGE_luci-app-filebrowser=y
 CONFIG_PACKAGE_luci-app-fileassistant=y
 
-CONFIG_PACKAGE_luci-app-filetransfer=y
+#CONFIG_PACKAGE_luci-app-filetransfer=y
 CONFIG_PACKAGE_luci-app-ttyd=y
 
 ##services:
