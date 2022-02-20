@@ -4,6 +4,6 @@
 
 此文件曾经正常使用过,初步考虑是openwrt源码改动后两者不匹配造成的.
 
-
+20220220 根据https://github.com/281677160/common/blob/main/common.sh对比修改后目前Compilation Information step不再自动中断 ,但是编译信息显示不全{缺固件内核和编译 服务器的 CPU型号)
 
 2.luci-app-cpufreq在编译前的位置?
