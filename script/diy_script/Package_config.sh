@@ -29,16 +29,15 @@ TIME() {
 #-----------------------------------------------------------------------------------------------------------
 echo
 TIME r "开始选择安装的插件:"
+TIME r "luci-app-adguardhome"
+
 TIME r "luci-app-filebrowser"
 TIME r "luci-app-fileassistant"
-
-TIME r "luci-app-ttyd"
-TIME r "luci-app-adguardhome"
 TIME r "luci-app-ikoolproxy"
+
 TIME r "luci-app-openclash"
 TIME r "luci-app-unblockmusic"
-TIME r "luci-app-firewall"
-TIME r "luci-app-turboacc"
+
 TIME r "luci-theme-bootstrap"
 TIME r "luci-theme-infinityfreedom"
 
