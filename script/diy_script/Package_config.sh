@@ -32,7 +32,7 @@ TIME r "开始选择安装的插件:"
 TIME r "luci-app-adguardhome"
 
 TIME r "luci-app-filebrowser"
-TIME r "luci-app-fileassistant"
+TIME r "luci-app-filetransfer"
 TIME r "luci-app-ikoolproxy"
 
 TIME r "luci-app-openclash"
