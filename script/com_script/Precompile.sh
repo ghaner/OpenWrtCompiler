@@ -96,7 +96,11 @@ if [[ "${COMPILE_INFORMATION}" == "true" ]]; then
 	awk '$0=NR$0' Plug-in > Plug-2
 	awk '{print "	" $0}' Plug-2 > Plug-in
 	sed -i "s/^/TIME g \"/g" Plug-in
-
+        cat /proc/cpuinfo | grep name | cut -f2 -d: | uniq -c > CPU
+            cat /proc/cpuinfo | grep "cpu cores" | uniq >> CPU
+            sed -i 's|[[:space:]]||g; s|^.||' CPU && sed -i 's|CPU||g; s|pucores:||' CPU
+            CPUNAME="$(awk 'NR==1' CPU)" && CPUCORES="$(awk 'NR==2' CPU)"
+            rm -rf CPU
 fi
 rm -rf ${Home}/files/{README,README.md}
 
