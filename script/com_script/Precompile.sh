@@ -107,9 +107,7 @@ if [[ "${COMPILE_INFORMATION}" == "true" ]]; then
 	else
 		PATCHVER="unknown"
 	fi
-	if [[ ! "${PATCHVER}" == "unknown" ]]; then
-		PATCHVER=$(egrep -o "${PATCHVER}.[0-9]+" ${Home}/include/kernel-version.mk)
-	fi
+	
 	
 	
 fi
