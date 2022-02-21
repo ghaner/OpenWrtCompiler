@@ -29,8 +29,8 @@ TIME() {
 # Add a third-party software:git clone --depth=1 software-url package/third-party-feed/software-name
 # Add a third-party software:svn co software-url(/trunk or branch/branch-name/software-name) package/third-party-feed/software-name
 #---------------------------------------------------------------------------------------------------------------------------
-#echo
-#TIME y "添加 third-party software:"
+echo
+TIME y "添加 third-party software:"
 #if [[ ${REGULAR_UPDATE} == "true" ]]; then
 #    echo
 #    TIME y "添加 luci-app-autoupdate:"
@@ -79,5 +79,5 @@ TIME() {
 #TIME y "添加 网络测速"
 #git clone https://github.com/sirpdboy/NetSpeedTest package/NetSpeedTest
 
-#TIME y "添加 third-party software 结束"
+TIME y "添加 third-party software 结束"
 #----------------------------------------------------------------------------------------------------------
