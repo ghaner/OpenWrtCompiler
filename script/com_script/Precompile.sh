@@ -2,6 +2,8 @@
 # https://github.com/mdtycl/Compile-OpenWrt
 # common Module by mdtycl
 # matrix.target=${Modelfile}
+# https://github.com/281677160/common/blob/main/common.sh
+
 
 TIME() {
 Compte=$(date +%Y年%m月%d号%H时%M分)
