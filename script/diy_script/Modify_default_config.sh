@@ -49,7 +49,7 @@ echo
 TIME b "空置登录密码"
 sed -i "/CYXluq4wUazHjmCDBCqXF/d" package/lean/default-settings/files/zzz-default-settings
 
-TIME b "空置空登录密码"
+#TIME b "修改登录密码"
 #sed -i 's/root::0:0:99999:7:::/root:$1$6Z4AhXZY$VybahykOsZ.5Afbm2gcm9/:19045:0:99999:7:::/g' package/base-files/files/etc/shadow
 
 
