@@ -120,7 +120,7 @@ jobs:
         chmod -R +x "${PATH_Diyscript}"
         source ${PATH_Diyscript}/Delete_original_code.sh
         source ${PATH_Diyscript}/Modify_default_config.sh
-        #mv "${GITHUB_WORKSPACE}/$CONFIG_FILE" .config
+        
         source ${PATH_Diyscript}/Device_config.sh
         source ${PATH_Diyscript}/Package_config.sh
         source ${PATH_Diyscript}/Adjust_menu_position.sh
