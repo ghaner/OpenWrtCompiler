@@ -30,7 +30,7 @@ TIME() {
 echo
 TIME r "开始选择安装的插件:"
 TIME r "luci-app-adguardhome"
-TIME r "luci-app-aliyundrive-webdav"
+#TIME r "luci-app-aliyundrive-webdav"
 TIME r "luci-app-filebrowser"
 TIME r "luci-app-fileassistant"
 #TIME r "luci-app-ikoolproxy"
@@ -107,7 +107,7 @@ CONFIG_PACKAGE_luci-app-ttyd=y
 
 ##services:
 CONFIG_PACKAGE_luci-app-adguardhome=y
-CONFIG_PACKAGE_luci-app-aliyundrive-webdav=y
+#CONFIG_PACKAGE_luci-app-aliyundrive-webdav=y
 
 #CONFIG_PACKAGE_luci-app-ikoolproxy=y
 #CONFIG_PACKAGE_luci-app-jd-dailybonus=y
