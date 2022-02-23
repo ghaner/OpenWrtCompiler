@@ -107,11 +107,13 @@ CONFIG_PACKAGE_luci-app-ttyd=y
 
 ##services:
 CONFIG_PACKAGE_luci-app-adguardhome=y
+CONFIG_PACKAGE_luci-app-aliyundrive-webdav=y
+
 #CONFIG_PACKAGE_luci-app-ikoolproxy=y
 #CONFIG_PACKAGE_luci-app-jd-dailybonus=y
 CONFIG_PACKAGE_luci-app-openclash=y
 CONFIG_PACKAGE_luci-app-unblockmusic=y
-CONFIG_PACKAGE_luci-app-aliyundrive-webdav=y
+
 
 ##network:
 CONFIG_PACKAGE_luci-app-firewall=y
