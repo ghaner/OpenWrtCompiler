@@ -38,8 +38,10 @@ TIME r "开始加载etc/config:"
 TIME r "加载filebrowser"
 TIME r "加载openclash"
 TIME r "加载turboacc"
-TIME b "开始加载etc/openclash/"
 TIME b "开始加载etc/filebrowser.db/"
+TIME b "开始加载AdGuardHome.yaml"
+TIME b "开始加载etc/openclash/"
+
 
 if [ -n "$(ls -A "${PATH_Custom}/diy" 2>/dev/null)" ]; then
     cp -Rf "${PATH_Custom}"/diy/* "${Home}"
