@@ -39,7 +39,7 @@ TIME r "加载filebrowser"
 TIME r "加载openclash"
 TIME r "加载turboacc"
 TIME b "开始加载etc/filebrowser.db/"
-TIME b "开始加载AdGuardHome.yaml"
+TIME b "开始加载etc/AdGuardHome.yaml"
 TIME b "开始加载etc/openclash/"
 
 
