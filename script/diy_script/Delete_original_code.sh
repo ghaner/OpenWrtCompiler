@@ -35,6 +35,8 @@ TIME r "Delete original code:"
 #rm -rf ./package/lean/luci-theme-argon
 #rm -rf ./feeds/luci/themes/luci-theme-material
 #TIME r "删除源码中与third-party feed重复的插件:"
+#rm -rf ./feeds/luci/applications/luci-app-aliyundrive-webdav
+
 #rm -rf ./feeds/packages/net/smartdns
 #rm -rf ./feeds/packages/admin/netdata
 #rm -rf ./package/lean/luci-app-netdata
