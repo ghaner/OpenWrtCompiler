@@ -34,13 +34,17 @@ TIME() {
 
 echo
 TIME r "开始加载custom files:"
-TIME r "开始加载etc/config:"
-TIME r "加载filebrowser"
-TIME r "加载openclash"
-TIME r "加载turboacc"
-TIME b "开始加载etc/filebrowser.db/"
-TIME b "开始加载etc/AdGuardHome.yaml"
-TIME b "开始加载etc/openclash/"
+
+TIME r "加载etc/config/filebrowser"
+TIME r "加载etc/config/openclash"
+TIME r "加载etc/config/turboacc"
+TIME r "加载etc/config/unblockmusic"
+TIME b "加载etc/AdGuardHome.yaml"
+TIME b "加载etc/filebrowser.db/"
+
+
+
+TIME b "加载etc/openclash/"
 
 
 if [ -n "$(ls -A "${PATH_Custom}/diy" 2>/dev/null)" ]; then
