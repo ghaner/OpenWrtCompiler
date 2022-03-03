@@ -37,7 +37,7 @@ TIME r "luci-app-fileassistant"
 
 TIME r "luci-app-openclash"
 TIME r "luci-app-unblockmusic"
-
+TIME r "luci-app-timedreboot"
 TIME r "luci-theme-bootstrap"
 TIME r "luci-theme-infinityfreedom"
 
@@ -102,7 +102,7 @@ CONFIG_PACKAGE_wget-ssl=y
 CONFIG_PACKAGE_luci-app-filebrowser=y
 CONFIG_PACKAGE_luci-app-fileassistant=y
 
-
+CONFIG_PACKAGE_luci-app-timedreboot=y
 CONFIG_PACKAGE_luci-app-ttyd=y
 
 ##services:
