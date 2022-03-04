@@ -37,6 +37,8 @@ TIME r "开始加载custom files:"
 
 TIME r "加载etc/config/filebrowser"
 TIME r "加载etc/config/openclash"
+
+TIME r "加载etc/config/timedreboot"
 TIME r "加载etc/config/turboacc"
 TIME r "加载etc/config/unblockmusic"
 TIME b "加载etc/AdGuardHome.yaml"
