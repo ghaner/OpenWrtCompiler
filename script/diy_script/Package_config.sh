@@ -39,7 +39,7 @@ TIME r "luci-app-openclash"
 TIME r "luci-app-unblockmusic"
 TIME r "luci-app-timedreboot"
 TIME r "luci-theme-bootstrap"
-TIME r "luci-theme-infinityfreedom"
+#TIME r "luci-theme-infinityfreedom"
 
 
 cat >> .config <<EOF
@@ -121,7 +121,7 @@ CONFIG_PACKAGE_luci-app-turboacc=y
 
 # LuCI-theme
 CONFIG_DEFAULT_luci-theme-bootstrap=y
-CONFIG_PACKAGE_luci-theme-infinityfreedom=y
+#CONFIG_PACKAGE_luci-theme-infinityfreedom=y
 
 
 #block default PACKAGE:CONFIG_PACKAGE_PACKAGE-name=n
