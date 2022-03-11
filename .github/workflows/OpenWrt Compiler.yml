@@ -44,7 +44,7 @@ jobs:
 
     - name: Assign Environment Variables
       run: |
-        source "${GITHUB_WORKSPACE}/script/diy_script/ENV.ini"
+        source "${GITHUB_WORKSPACE}/cus_script/ENV.ini"
         echo "REPO_URL=${REPO_URL}" >> $GITHUB_ENV
         echo "REPO_BRANCH=${REPO_BRANCH}" >> $GITHUB_ENV
         echo "COMPILE_INFORMATION=${COMPILE_INFORMATION}" >> $GITHUB_ENV
