@@ -124,7 +124,7 @@ jobs:
         source ${PATH_Cusscript}/Device_config.sh
         source ${PATH_Cusscript}/Package_config.sh
         source ${PATH_Cusscript}/Adjust_menu_position.sh
-        #source ${PATH_Cusscript}/Load_custom_files.sh
+        
     
     - name: Load the Cache
       if: env.CACHE_BUILD == 'true'
