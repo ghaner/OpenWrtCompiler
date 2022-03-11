@@ -1,8 +1,0 @@
-
-config main
-	option once '0'
-	option enable '1'
-	option week '7'
-	option minute '00'
-	option hour '05'
-
