@@ -96,9 +96,9 @@ jobs:
         ./scripts/feeds update -a > /dev/null 2>&1
         
         echo "Home=${GITHUB_WORKSPACE}/openwrt" >> $GITHUB_ENV
-        echo "PATH_Custom=${GITHUB_WORKSPACE}/custom_files" >> $GITHUB_ENV
-        echo "PATH_Comscript=${GITHUB_WORKSPACE}/script/com_script" >> $GITHUB_ENV
-        echo "PATH_Diyscript=${GITHUB_WORKSPACE}/script/diy_script" >> $GITHUB_ENV
+        #echo "PATH_Custom=${GITHUB_WORKSPACE}/custom_files" >> $GITHUB_ENV
+        echo "PATH_Comscript=${GITHUB_WORKSPACE}/com_script" >> $GITHUB_ENV
+        echo "PATH_Cusscript=${GITHUB_WORKSPACE}/cus_script" >> $GITHUB_ENV
        
     - name: Feed Add Update Install
       run: |
