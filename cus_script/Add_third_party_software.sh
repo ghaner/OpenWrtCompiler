@@ -53,6 +53,9 @@ echo
 TIME y "添加 openclash"
 svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/third-party-software/luci-app-openclash
 echo
+TIME y "添加 luci-app-store"
+svn co https://github.com/haiibo/openwrt-packages/trunk/luci-app-store package/third-party-software/luci-app-store
+echo
 TIME y "添加 timedreboot"
 git clone --depth 1 https://github.com/kongfl888/luci-app-timedreboot package/third-party-software/luci-app-timedreboot
 echo

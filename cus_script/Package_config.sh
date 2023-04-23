@@ -28,7 +28,7 @@ TIME() {
 # CONFIG_DEFAULT_PACKAGE-name=n
 #-----------------------------------------------------------------------------------------------------------
 echo
-TIME r "开始选择安装的插件:"
+TIME r "Package_config.sh开始选择安装的插件:"
 TIME r "luci-app-adguardhome"
 #TIME r "luci-app-aliyundrive-webdav"
 TIME r "luci-app-filebrowser"
@@ -103,7 +103,7 @@ CONFIG_PACKAGE_wget-ssl=y
 ##system:
 CONFIG_PACKAGE_luci-app-filebrowser=y
 CONFIG_PACKAGE_luci-app-fileassistant=y
-
+CONFIG_PACKAGE_luci-app-store=y
 CONFIG_PACKAGE_luci-app-timedreboot=y
 CONFIG_PACKAGE_luci-app-ttyd=y
 
