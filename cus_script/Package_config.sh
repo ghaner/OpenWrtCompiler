@@ -28,7 +28,7 @@ TIME() {
 # CONFIG_DEFAULT_PACKAGE-name=n
 #-----------------------------------------------------------------------------------------------------------
 echo
-TIME r "Package_config.sh开始选择安装的插件:"
+TIME r "开始选择安装的插件:"
 TIME r "luci-app-adguardhome"
 #TIME r "luci-app-aliyundrive-webdav"
 TIME r "luci-app-filebrowser"
@@ -36,7 +36,7 @@ TIME r "luci-app-fileassistant"
 #TIME r "luci-app-ikoolproxy"
 
 TIME r "luci-app-openclash"
-TIME r "luci-app-unblockneteasemusic"
+#TIME r "luci-app-unblockmusic"
 TIME r "luci-app-timedreboot"
 TIME r "luci-theme-bootstrap"
 #TIME r "luci-theme-infinityfreedom"
@@ -103,7 +103,7 @@ CONFIG_PACKAGE_wget-ssl=y
 ##system:
 CONFIG_PACKAGE_luci-app-filebrowser=y
 CONFIG_PACKAGE_luci-app-fileassistant=y
-CONFIG_PACKAGE_luci-app-store=y
+
 CONFIG_PACKAGE_luci-app-timedreboot=y
 CONFIG_PACKAGE_luci-app-ttyd=y
 
@@ -114,7 +114,7 @@ CONFIG_PACKAGE_luci-app-adguardhome=y
 #CONFIG_PACKAGE_luci-app-ikoolproxy=y
 #CONFIG_PACKAGE_luci-app-jd-dailybonus=y
 CONFIG_PACKAGE_luci-app-openclash=y
-CONFIG_PACKAGE_luci-app-unblockneteasemusic=y
+#CONFIG_PACKAGE_luci-app-unblockmusic=y
 
 
 ##network:
@@ -143,7 +143,6 @@ CONFIG_PACKAGE_luci-app-samba4=n
 #CONFIG_DEFAULT_luci-app-ssr-plus=n
 CONFIG_PACKAGE_luci-app-vlmcsd=n
 CONFIG_PACKAGE_luci-app-ipsec-vpnd=n
-CONFIG_PACKAGE_luci-app-unblockmusic=n
 CONFIG_PACKAGE_luci-app-upnp=n
 CONFIG_PACKAGE_luci-app-vsftpd=n
 CONFIG_PACKAGE_luci-app-wol=n

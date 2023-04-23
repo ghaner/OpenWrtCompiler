@@ -24,11 +24,10 @@ TIME() {
 }
 
 #===========================================================================================================================
-# 第三方插件最好先拉进仓库https://github.com/ghaner/Package-updater ,再由之作为唯一的feed,除有条件的软件外不在此处单独添加第三方插件.
-# Add a third-party software:git clone -b branch-name software-url.git package/third-party-software/software-name
-# Add a third-party software:git clone --depth=1 software-url package/third-party-software/software-name
-# Add a third-party software:svn co software-url(/trunk or branch/branch-name/software-name) package/third-party-software/software-name
-# Makefile文件在仓库根目录下应用git clone命令，其他用svn co命令
+# 第三方插件必须要先拉进仓库https://github.com/ghaner/openwrt-package,再由之作为唯一的feed,除有条件的软件外不在此处单独添加第三方插件.
+# Add a third-party software:git clone -b branch-name software-url.git package/third-party-feed/software-name
+# Add a third-party software:git clone --depth=1 software-url package/third-party-feed/software-name
+# Add a third-party software:svn co software-url(/trunk or branch/branch-name/software-name) package/third-party-feed/software-name
 #---------------------------------------------------------------------------------------------------------------------------
 echo
 TIME y "添加 third-party software:"
@@ -38,33 +37,28 @@ TIME y "添加 third-party software:"
 #    git clone https://github.com/mdtycl/luci-app-autoupdate feeds/luci/applications/luci-app-autoupdate
 #fi
 
-echo
-TIME y "添加 adguardhome"
-svn co https://github.com/kenzok8/openwrt-packages/trunk/adguardhome package/third-party-software/adguardhome
-svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-adguardhome package/third-party-software/luci-app-adguardhome
-echo
-TIME y "添加 filebrowser"
-svn co https://github.com/kenzok8/openwrt-packages/trunk/filebrowser package/third-party-software/filebrowser
-svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-filebrowser package/third-party-software/luci-app-filebrowser
-echo
-TIME y "添加 fileassistant"
-svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-fileassistant package/third-party-software/luci-app-fileassistant
-echo
-TIME y "添加 openclash"
-svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/third-party-software/luci-app-openclash
-echo
-TIME y "添加 luci-app-store"
-svn co https://github.com/haiibo/openwrt-packages/trunk/luci-app-store package/third-party-software/luci-app-store
-echo
-TIME y "添加 timedreboot"
-git clone --depth 1 https://github.com/kongfl888/luci-app-timedreboot package/third-party-software/luci-app-timedreboot
-echo
-TIME y "添加 ttyd"
-svn co https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-ttyd package/third-party-software/luci-app-ttyd
-echo
-TIME y "添加 unblockneteasemusic"
-git clone --depth 1 https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic package/third-party-software/luci-app-unblockneteasemusic
-
+#echo
+#TIME y "添加 ikoolproxy"
+#git clone https://github.com/1wrt/luci-app-ikoolproxy.git package/luci-app-ikoolproxy
+#echo
+#TIME y "添加 SSR Plus+"
+#git clone https://github.com/fw876/helloworld package/gd772/ssrplus
+#echo
+#TIME y "添加 小猫咪"
+#svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/gd772/luci-app-openclash
+#echo
+#TIME y "添加 Pass wall"
+#git clone https://github.com/xiaorouji/openwrt-passwall package/gd772/passwall
+#echo
+#TIME y "添加 Hello World"
+#git clone https://github.com/jerrykuku/luci-app-vssr package/gd772/luci-app-vssr
+#echo
+#TIME y "添加 京东签到"
+#git clone https://github.com/jerrykuku/luci-app-jd-dailybonus package/gd772/luci-app-jd-dailybonus
+#echo
+#TIME y "添加 SmartDNS"
+#git clone https://github.com/pymumu/luci-app-smartdns.git -b lede ./package/gd772/luci-app-smartdns
+#git clone https://github.com/pymumu/openwrt-smartdns.git ./feeds/packages/net/smartdns
 #echo
 #TIME y "添加 KPR去广告"
 #git clone https://github.com/project-lede/luci-app-godproxy package/gd772/luci-app-godproxy
