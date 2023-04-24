@@ -25,14 +25,15 @@ TIME() {
 
 #===========================================================================================================
 # add a third-party feed:git clone feed-url package/third-party-feed
+# 为避免多个feed中插件冲突，最好只添加一个feed。
 #----------------------------------------------------------------------------------------------------------
  
 echo
 TIME y "添加 a third-party feed:"
-#TIME y "-添加 https://github.com/ghaner/openwrt-package"
-#git clone https://github.com/ghaner/openwrt-package package/third-party-feedsource
-TIME y "-添加 https://github.com/ghaner/Package-updater"
-git clone https://github.com/ghaner/Package-updater package/third-party-feed
+TIME y "-添加 https://github.com/ghaner/OpenWrt-Packages "
+git clone https://github.com/ghaner/OpenWrt-Packages package/third-party-feed
+#TIME y "-添加 https://github.com/ghaner/Package-updater"
+#git clone https://github.com/ghaner/Package-updater package/third-party-feed
 
 chmod -R 755 package/third-party-feed
 TIME y "添加 a third-party feed 结束" 
