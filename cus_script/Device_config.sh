@@ -24,7 +24,7 @@ TIME() {
 # 在 cat >> .config <<EOF 到 EOF 之间粘贴配置 同时注释掉其他路由器型号
 #-----------------------------------------------------------------------------------------------------------
 echo
-TIME r "cus_script/Device_config.sh开始载入路由器型号:${TARGET_model}"
+TIME r "cus_script/Device_config.sh开始载入路由器型号:asus_rt-acrh17"
 cat >> .config <<EOF
 #MODULES:
 CONFIG_TARGET_ipq40xx=y
