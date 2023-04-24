@@ -28,7 +28,7 @@ TIME() {
 #----------------------------------------------------------------------------------------------------------
 
 echo
-TIME b "Modify default config:"
+TIME b "cus_script/Modify default config.sh开始修改默认设置"
 
 echo
 TIME b "修改默认登录IP为 192.168.10.1"

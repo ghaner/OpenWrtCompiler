@@ -24,13 +24,16 @@ TIME() {
 }
 
 #===========================================================================================================================
-# 第三方插件必须要先拉进仓库https://github.com/ghaner/openwrt-package,再由之作为唯一的feed,除有条件的软件外不在此处单独添加第三方插件.
-# Add a third-party software:git clone -b branch-name software-url.git package/third-party-feed/software-name
-# Add a third-party software:git clone --depth=1 software-url package/third-party-feed/software-name
-# Add a third-party software:svn co software-url(/trunk or branch/branch-name/software-name) package/third-party-feed/software-name
+# 第三方插件最好先拉进仓库https://github.com/ghaner/openwrt-package,再由之作为唯一的feed,除有条件的软件外不在此处单独添加第三方插件.
+# 命令格式 拉取命令 插件源代码路径 package/third-party-package/package-name（编译文件路径）
+# 拉取命令：插件编译源代码的makefile文件在仓库根目录下用git clone命令，其他用svn co命令
+# 插件源代码路径  插件编译源代码的makefile文件在仓库根目录下为仓库根目录的浏览器地址栏内的地址，否则用“trunk”代替浏览器地址栏内地址中的“tree/master”
+# Add a third-party package:git clone -b branch-name package-url.git package/third-party-package/package-name
+# Add a third-party package:git clone --depth=1 package-url package/third-party-package/package-name
+# Add a third-party package:svn co package-url(/trunk or branch/branch-name/package-name) package/third-party-package/package-name
 #---------------------------------------------------------------------------------------------------------------------------
 echo
-TIME y "添加 third-party software:"
+TIME y "cus_script/Add_third_party_package.sh开始添加 third-party package:"
 #if [[ ${REGULAR_UPDATE} == "true" ]]; then
 #    echo
 #    TIME y "添加 luci-app-autoupdate:"
