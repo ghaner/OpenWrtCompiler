@@ -36,7 +36,7 @@ TIME r "luci-app-fileassistant"
 #TIME r "luci-app-ikoolproxy"
 
 TIME r "luci-app-openclash"
-#TIME r "luci-app-unblockmusic"
+TIME r "luci-app-unblockneteasemusic"
 TIME r "luci-app-timedreboot"
 TIME r "luci-theme-bootstrap"
 #TIME r "luci-theme-infinityfreedom"
