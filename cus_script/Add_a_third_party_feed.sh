@@ -30,8 +30,8 @@ TIME() {
  
 echo
 TIME y "添加 a third-party feed:"
-TIME y "-添加 https://github.com/ghaner/OpenwrtPackage-Updater "
-git clone https://github.com/ghaner/OpenwrtPackage-Updater package/third-party-feed
+TIME y "-添加 https://github.com/ghaner/OpenWrt-Package "
+git clone https://github.com/ghaner/OpenWrt-Package package/third-party-feed
 
 
 chmod -R 755 package/third-party-feed
