@@ -38,8 +38,8 @@ echo
 TIME b "cus_script/adjust_menu_position.sh开始调整插件菜单位置:"
 TIME b "调整 cpufreq 到 system菜单"
 sed -i 's/\"services\"/\"system\"/g' feeds/luci/applications/luci-app-cpufreq/luasrc/controller/cpufreq.lua
-#TIME b "调整 分流助手 到 网络菜单"
-#sed -i 's/\"services\"/\"network\"/g' package/lean/luci-app-mwan3helper/luasrc/controller/mwan3helper.lua
+TIME b "调整 文件助手 到 NAS菜单"
+sed -i 's/\"services\"/\"NAS\"/g' package/third-party-feed/luci-app-fileassistant/luasrc/controller/fileassistant.lua
 #curl -fsSL https://raw.githubusercontent.com/gd0772/patch/main/mwan3helper_status.htm > ./package/lean/luci-app-mwan3helper/luasrc/view/mwan3helper/mwan3helper_status.htm
 #TIME b "调整 Dockerman 到 服务 菜单"
 #sed -i 's/"admin",/"admin","services",/g' package/gd772/luci-app-dockerman/luasrc/controller/*.lua

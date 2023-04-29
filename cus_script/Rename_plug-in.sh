@@ -27,11 +27,12 @@ TIME() {
 
 
 
-
- 
 #===========================================================================================================
-#echo              
-#TIME b "插件重命名..."
+#插件名称文件位置  luasrc/controller/shadowsocksr.lua或.po
+#===========================================================================================================
+#echo   
+#TIME r "Rename_plug-in.sh开始重命名插件"       
+#TIME b "解除网易云音乐播放限制重命名为网易云音乐"
 #sed -i 's/"管理权"/"改密码"/g' feeds/luci/modules/luci-base/po/zh-cn/base.po
 
 #sed -i 's/msgstr "Web 管理"/msgstr "Web"/g' package/lean/luci-app-webadmin/po/zh-cn/webadmin.po
