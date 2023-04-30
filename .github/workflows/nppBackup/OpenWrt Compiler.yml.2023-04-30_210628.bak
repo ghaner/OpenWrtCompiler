@@ -124,7 +124,7 @@ jobs:
         source ${PATH_Cusscript}/Device_config.sh
         source ${PATH_Cusscript}/Package_config.sh
         source ${PATH_Cusscript}/Adjust_menu_position.sh
-        source ${PATH_Cusscript}/Rename_plug-in.sh
+        
         
     
     
@@ -188,21 +188,21 @@ jobs:
      
     - name: Upload Config to Actions Runs Artifacts
       if: env.UPLOAD_CONFIG == 'true'
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v2
       with:
         name: .config_${{ env.CODE }}_${{ env.TARGET_PROFILE }}_${{ env.Compile_Date }}
         path: config.txt
         
     - name: Upload Bin_Dir to Actions Runs Artifacts
       if: steps.compile.outputs.status == 'success' && env.UPLOAD_BIN_DIR == 'true'
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v2
       with:
         name: firmware+ipk_${{ env.CODE }}_${{ env.TARGET_PROFILE }}_${{ env.Compile_Date }}
         path: openwrt/bin 
 
     - name: Upload Firmware to Actions Runs Artifacts
       if: steps.organize.outputs.status == 'success' && env.UPLOAD_Artifacts == 'true'
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v2
       with:
         name: ${{ env.OpenWrt_name }}-${{ env.CODE }}-${{ env.TARGET_PROFILE }}-firmware-${{ env.Compile_Date }}
         path: ${{ env.FIRMWARE }}
@@ -256,7 +256,7 @@ jobs:
         artifacts: "${{ env.FIRMWARE }}/*"   
 
     - name: Delete workflow runs
-      uses: Mattraks/delete-workflow-runs@v2
+      uses: Mattraks/delete-workflow-runs@main
       with:
          token: ${{ secrets.REPO_TOKEN }}
          repository: ${{ github.repository }}
