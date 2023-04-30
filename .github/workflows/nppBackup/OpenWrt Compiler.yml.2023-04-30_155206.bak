@@ -173,7 +173,7 @@ jobs:
         cd openwrt
         echo -e "$(nproc) thread compile"
         make -j$(nproc) || make -j1 V=s
-        echo "status=success" >> $GITHUB_OUTPUT
+        echo "::set-output name=status::success"
         echo "date=$(date "+%Y%m%d%H%M%S")" >> $GITHUB_ENV
         echo "date1=$(date +'%m-%d')" >> $GITHUB_ENV
           
@@ -183,7 +183,7 @@ jobs:
         cd openwrt/bin/targets/*/*
         rm -rf packages
         echo "FIRMWARE=$PWD" >> $GITHUB_ENV
-        echo "status=success" >> $GITHUB_OUTPUT
+        echo "::set-output name=status::success"
      
     - name: Upload Config to Actions Runs Artifacts
       if: env.UPLOAD_CONFIG == 'true'
@@ -214,7 +214,7 @@ jobs:
         ./transfer cow --block 2621440 -s -p 64 --no-progress ${FIRMWARE} 2>&1 | tee cowtransfer.log
         sed -i "s/Download Link/CowTransfer/g" cowtransfer.log
         echo "::warning file=cowtransfer.com::$(cat cowtransfer.log | grep https)"
-        echo "url=$(cat cowtransfer.log | grep https | cut -f3 -d" ")" >> $GITHUB_OUTPUT 
+        echo "::set-output name=url::$(cat cowtransfer.log | grep https | cut -f3 -d" ")" 
           
     - name: Upload Firmware to WeTransfer
       id: wetransfer
@@ -224,13 +224,13 @@ jobs:
         ./transfer wet -s -p 16 --no-progress ${FIRMWARE} 2>&1 | tee wetransfer.log
         sed -i "s/Download Link/WeTransfer/g" wetransfer.log
         echo "::warning file=wetransfer.com::$(cat wetransfer.log | grep https)"
-        echo "url=$(cat wetransfer.log | grep https | cut -f3 -d" ")" >> $GITHUB_OUTPUT
+        echo "::set-output name=url::$(cat wetransfer.log | grep https | cut -f3 -d" ")"
        
     - name: Generate Releases Tags
       id: tag
       if: steps.organize.outputs.status == 'success' && env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
-        echo "release_tag=$(date +"%Y.%m.%d-%H%M")" >> $GITHUB_OUTPUT
+        echo "::set-output name=release_tag::$(date +"%Y.%m.%d-%H%M")"
         touch update_log.txt        
         if [[ "${UPLOAD_COWTRANSFER}" == "true" ]]; then
         curl -fsSL git.io/file-transfer | sh
@@ -242,7 +242,7 @@ jobs:
         ./transfer wet -s -p 16 --no-progress ${FIRMWARE} 2>&1 | tee wetransfer.log
         echo "##### WETRANSFER：$(cat wetransfer.log | grep https | cut -f3 -d" ")" >> update_log.txt
         fi    
-        echo "status=success" >> $GITHUB_OUTPUT
+        echo "::set-output name=status::success"
     
     - name: Upload Firmware to Release Assets
       if: steps.tag.outputs.status == 'success' && env.UPLOAD_RELEASE == 'true' && env.REPO_TOKEN
