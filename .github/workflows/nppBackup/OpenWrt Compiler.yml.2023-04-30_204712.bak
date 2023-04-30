@@ -124,7 +124,6 @@ jobs:
         source ${PATH_Cusscript}/Device_config.sh
         source ${PATH_Cusscript}/Package_config.sh
         source ${PATH_Cusscript}/Adjust_menu_position.sh
-        source ${PATH_Cusscript}/Rename_plug-in.sh
         
     
     
