@@ -30,7 +30,7 @@ TIME() {
 echo
 TIME r "cus_script/Package_config.sh开始选择安装的插件:"
 TIME r "luci-app-adguardhome"
-#TIME r "luci-app-ttyd"
+TIME r "luci-app-ttyd"
 TIME r "luci-app-filebrowser"
 TIME r "luci-app-fileassistant"
 #TIME r "luci-app-ikoolproxy"
