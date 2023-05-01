@@ -51,7 +51,7 @@ sed -i "/CYXluq4wUazHjmCDBCqXF/d" package/lean/default-settings/files/zzz-defaul
 
 echo
 TIME b "TTYD自动登录"
-sed -i 's/login/login -f root/g' feeds/packages/utils/ttyd/files/ttyd.config
+sed -i 's/login/login -f root/g' openwrt/feeds/packages/utils/ttyd/files/ttyd.config
 
 
 TIME b "Modify default config 结束"
