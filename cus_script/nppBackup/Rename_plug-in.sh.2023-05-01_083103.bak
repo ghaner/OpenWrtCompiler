@@ -28,16 +28,13 @@ TIME() {
 
 
 #===========================================================================================================
-#修改插件名称命令格式：
-#    sed -i 's/要被替换的字符串/新字符串/g' 要被替换的字符串所在文件路径     -i使 sed 修改文件
-#    sed -i 's/要被替换的字符串/新字符串/g' `grep "要被替换的字符串" -rl ./` -r：递归查找子目录中的文件 -l：只打印匹配的文件名
-#插件名称文件位置路径：luasrc/controller/*.lua或.po
+#插件名称文件位置  luasrc/controller/shadowsocksr.lua或.po
 #===========================================================================================================
 echo   
 TIME r "cus_script/Rename_plug-in.sh开始重命名插件"       
 TIME b "解除网易云音乐播放限制重命名为Unblockneteasemusic"
-#sed -i 's/"解除网易云音乐播放限制"/"Unblockneteasemusic"/g' package/third-party-feed/luci-app-unblockneteasemusic/luasrc/controller/unblockneteasemusic.lua
-sed -i 's/"解除网易云音乐播放限制"/"Unblockneteasemusic"/g' `grep "解除网易云音乐播放限制" -rl ./`
+sed -i 's/"解除网易云音乐播放限制"/"Unblockneteasemusic"/g' package/third-party-feed/luci-app-unblockneteasemusic/luasrc/controller/unblockneteasemusic.lua
+
 #sed -i 's/msgstr "Web 管理"/msgstr "Web"/g' package/lean/luci-app-webadmin/po/zh-cn/webadmin.po
 
 #sed -i 's/TTYD 终端/命令行/g' package/lean/luci-app-ttyd/po/zh-cn/terminal.po
