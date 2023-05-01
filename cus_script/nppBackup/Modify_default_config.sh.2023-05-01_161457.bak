@@ -49,9 +49,9 @@ echo
 TIME b "空置登录密码"
 sed -i "/CYXluq4wUazHjmCDBCqXF/d" package/lean/default-settings/files/zzz-default-settings
 
-#echo
-#TIME b "TTYD自动登录"
-#sed -i 's/login/login -f root/g' feeds/packages/utils/ttyd/files/ttyd.config
+echo
+TIME b "TTYD自动登录"
+sed -i 's/login/login -f root/g' feeds/packages/utils/ttyd/files/ttyd.config
 
 
 TIME b "Modify default config 结束"
