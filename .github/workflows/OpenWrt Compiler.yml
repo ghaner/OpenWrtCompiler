@@ -118,7 +118,7 @@ jobs:
         cd openwrt
         
         chmod -R +x "${PATH_Cusscript}"
-        source ${PATH_Cusscript}/Delete_original_code.sh
+        #source ${PATH_Cusscript}/Delete_original_code.sh
         source ${PATH_Cusscript}/Modify_default_config.sh
         
         source ${PATH_Cusscript}/Device_config.sh
