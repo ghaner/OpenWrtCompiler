@@ -105,7 +105,7 @@ jobs:
         cd openwrt
         chmod -R +x "${PATH_Cusscript}"
         source ${PATH_Cusscript}/Add_a_third_party_feed.sh
-        #source ${PATH_Cusscript}/Add_third_party_package.sh
+        source ${PATH_Cusscript}/Add_third_party_package.sh
       
         ./scripts/feeds update -a
         ./scripts/feeds install -a
