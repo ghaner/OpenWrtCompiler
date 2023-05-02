@@ -44,7 +44,7 @@ jobs:
 
     - name: Assign Environment Variables
       run: |
-        bash -x "${GITHUB_WORKSPACE}/cus_script/ENV.ini"
+        source "${GITHUB_WORKSPACE}/cus_script/ENV.ini"
         echo "REPO_URL=${REPO_URL}" >> $GITHUB_ENV
         echo "REPO_BRANCH=${REPO_BRANCH}" >> $GITHUB_ENV
         echo "COMPILE_INFORMATION=${COMPILE_INFORMATION}" >> $GITHUB_ENV
@@ -104,8 +104,8 @@ jobs:
       run: |
         cd openwrt
         chmod -R +x "${PATH_Cusscript}"
-        bash -x ${PATH_Cusscript}/Add_a_third_party_feed.sh
-        bash -x ${PATH_Cusscript}/Add_third_party_package.sh
+        source ${PATH_Cusscript}/Add_a_third_party_feed.sh
+        source ${PATH_Cusscript}/Add_third_party_package.sh
       
         ./scripts/feeds update -a
         ./scripts/feeds install -a
@@ -118,13 +118,13 @@ jobs:
         cd openwrt
         
         chmod -R +x "${PATH_Cusscript}"
-        #bash -x ${PATH_Cusscript}/Delete_original_code.sh
-        bash -x ${PATH_Cusscript}/Modify_default_config.sh
+        #source ${PATH_Cusscript}/Delete_original_code.sh
+        source ${PATH_Cusscript}/Modify_default_config.sh
         
-        bash -x ${PATH_Cusscript}/Device_config.sh
-        bash -x ${PATH_Cusscript}/Package_config.sh
-        bash -x ${PATH_Cusscript}/Adjust_menu_position.sh
-        bash -x ${PATH_Cusscript}/Rename_plug-in.sh
+        source ${PATH_Cusscript}/Device_config.sh
+        source ${PATH_Cusscript}/Package_config.sh
+        source ${PATH_Cusscript}/Adjust_menu_position.sh
+        source ${PATH_Cusscript}/Rename_plug-in.sh
         
     
     
@@ -132,7 +132,7 @@ jobs:
     - name: Generate Configuration
       run: |
         cd openwrt
-        bash -x "${PATH_Comscript}/Plugin_Conflict.sh" > /dev/null 2>&1
+        source "${PATH_Comscript}/Plugin_Conflict.sh" > /dev/null 2>&1
         make defconfig > /dev/null 2>&1
         ./scripts/diffconfig.sh > ${GITHUB_WORKSPACE}/config.txt
         echo "TARGET_BOARD=$(awk -F '[="]+' '/TARGET_BOARD/{print $2}' .config)" >> $GITHUB_ENV
@@ -151,11 +151,11 @@ jobs:
     - name: Compilation Information
       run: |
         cd openwrt
-        bash -x "${PATH_Comscript}/Precompile.sh" > /dev/null 2>&1
+        source "${PATH_Comscript}/Precompile.sh" > /dev/null 2>&1
         
         if [ "${COMPILE_INFORMATION}" == "true" ]; then
-          bash -x "${PATH_Comscript}/Get_Target_Info.sh"
-          bash -x "${PATH_Comscript}/Compilation_Info.sh"
+          source "${PATH_Comscript}/Get_Target_Info.sh"
+          source "${PATH_Comscript}/Compilation_Info.sh"
           chmod -R 755 .
         fi
 
