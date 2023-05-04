@@ -26,7 +26,8 @@ TIME() {
 # CONFIG_PACKAGE_PACKAGE-name=y
 # 禁止原生源码默认package配置:
 # CONFIG_DEFAULT_PACKAGE-name=n
-#-----------------------------------------------------------------------------------------------------------
+# 添加新package时需要在# dependencies:添加新package需要的依赖，具体依赖见源码官方仓库说明。
+#-------- ---------------------------------------------------------------------------------------------------
 echo
 TIME r "cus_script/Package_config.sh开始选择安装的插件:"
 TIME r "luci-app-adguardhome"
