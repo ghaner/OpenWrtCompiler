@@ -104,6 +104,8 @@ CONFIG_PACKAGE_wget-ssl=y
 #CONFIG_PACKAGE_luci-app-autotimeset=y
 CONFIG_PACKAGE_luci-app-timedreboot=y
 #CONFIG_PACKAGE_luci-app-ttyd=y
+##theme
+CONFIG_PACKAGE_luci-theme-argon=y
 ##NAS:
 CONFIG_PACKAGE_luci-app-filebrowser=y
 CONFIG_PACKAGE_luci-app-fileassistant=y
