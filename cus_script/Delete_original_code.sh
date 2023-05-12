@@ -32,9 +32,11 @@ TIME r "cus_script/Delete_original_code.sh开始删除openwrt编译源代码中�
 
 #TIME r "删除无用主题"
 #rm -rf ./feeds/freifunk/themes
-#rm -rf ./package/lean/luci-theme-argon
+
 #rm -rf ./feeds/luci/themes/luci-theme-material
-#TIME r "删除源码中与third-party feed重复的插件:"
+TIME r "删除源码中与third-party feed重复的插件:"
+TIME r "删除argon主题"
+rm -rf ./package/lean/luci-theme-argon
 #rm -rf ./feeds/luci/applications/luci-app-aliyundrive-webdav
 
 #rm -rf ./feeds/packages/net/smartdns
