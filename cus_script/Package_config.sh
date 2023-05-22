@@ -46,7 +46,7 @@ TIME r "luci-app-timedreboot"
 TIME r "luci-app-turboacc"
 
 
-TIME r "luci-theme-argon"
+#TIME r "luci-theme-argon"
 TIME r "luci-theme-bootstrap"
 #TIME r "luci-theme-infinityfreedom"
 
@@ -133,8 +133,8 @@ CONFIG_PACKAGE_luci-app-firewall=y
 CONFIG_PACKAGE_luci-app-turboacc=y
 
 # LuCI-theme
-CONFIG_PACKAGE_luci-theme-argon=y
-CONFIG_PACKAGE_luci-app-argon-config=y
+#CONFIG_PACKAGE_luci-theme-argon=y
+#CONFIG_PACKAGE_luci-app-argon-config=y
 CONFIG_DEFAULT_luci-theme-bootstrap=y
 #CONFIG_PACKAGE_luci-theme-infinityfreedom=y
 
