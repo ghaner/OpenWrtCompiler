@@ -247,7 +247,7 @@ jobs:
     
     - name: Upload Firmware to Release Assets
       if: steps.tag.outputs.status == 'success' && env.UPLOAD_RELEASE == 'true' && env.REPO_TOKEN
-      uses: ncipollo/release-action@v1.12.0
+      uses: ncipollo/release-action@v1.14.0
       with:
         name: ${{ env.CODE }}-${{ env.TARGET_PROFILE }}
         tag: ${{ steps.tag.outputs.release_tag }}
