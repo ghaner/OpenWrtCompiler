@@ -29,6 +29,7 @@ cat >> .config <<EOF
 #MODULES:
 CONFIG_TARGET_ipq40xx=y
 CONFIG_TARGET_ipq40xx_DEVICE_asus_rt-acrh17=y
+CONFIG_TARGET_BOARD="ipq40xx"
 EOF
 
 
