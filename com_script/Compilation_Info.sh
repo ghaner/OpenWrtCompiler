@@ -94,7 +94,7 @@ TIME z "  本次编译服务器的CPU型号为[ ${CPUNAME} ]"
 echo
 TIME z "  使用核心数为[ ${CPUCORES} ], 线程数为[ $(nproc) ]"
 echo
-TIME z "  CPU编译速度:8370C>8272CL>8171M>E5系列"
+TIME z "  CPU编译速度:8370C>8272CL>8171M>E5系列"  AMDEPYC776364-CoreProcessor
 echo
 TIME z "  如果编译的插件较多，而又分配到E5系列的CPU，常常会因为超过免费用户连续使用6小时的限制而被取消导致编译失败，建议关闭 重新再来！"
 echo
