@@ -118,7 +118,7 @@ CONFIG_PACKAGE_luci-app-timedreboot=y
 CONFIG_PACKAGE_luci-app-filebrowser=y
 CONFIG_PACKAGE_luci-app-fileassistant=y
 ##services:
-#CONFIG_PACKAGE_luci-app-adguardhome=y
+CONFIG_PACKAGE_luci-app-adguardhome=y
 CONFIG_PACKAGE_luci-app-openclash=y
 #CONFIG_PACKAGE_luci-app-unblockneteasemusic=y
 
