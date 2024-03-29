@@ -37,6 +37,14 @@ TIME r "cus_script/Delete_original_code.sh开始删除openwrt编译源代码中�
 TIME r "删除源码中与third-party feed重复的插件:"
 TIME r "删除argon主题"
 rm -rf ./package/lean/luci-theme-argon
+
+#TIME r "移除 openwrt feeds 自带的核心包"
+#rm -rf feeds/packages/net/{xray-core,v2ray-core,v2ray-geodata,sing-box}
+
+
+#TIME r "移除 golang 旧版本"
+#rm -rf feeds/packages/lang/golang
+
 #rm -rf ./feeds/luci/applications/luci-app-aliyundrive-webdav
 
 #rm -rf ./feeds/packages/net/smartdns

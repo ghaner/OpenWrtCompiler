@@ -30,10 +30,12 @@ TIME() {
  
 echo
 TIME y " cus_script/Add_a_third_party_feed.sh开始添加 a third-party feed:"
-TIME y "-添加 https://github.com/ghaner/OpenWrtPackage "
-git clone https://github.com/ghaner/OpenWrtPackage package/third-party-feed
-
-
+TIME y "-添加 https://github.com/ghaner/OpenwrtPackageUpdater "
+git clone https://github.com/ghaner/OpenwrtPackageUpdater package/third-party-feed
 chmod -R 755 package/third-party-feed
+TIME y "-添加 helloworld  "
+git clone --depth=1 https://github.com/fw876/helloworld.git package/helloworld
+chmod -R 755 package/helloworld
+
 TIME y "添加 a third-party feed 结束" 
 #===========================================================================================================================

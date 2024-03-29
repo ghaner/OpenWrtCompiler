@@ -86,7 +86,7 @@ CONFIG_PACKAGE_kmod-tun=y
 CONFIG_PACKAGE_libcap=y
 CONFIG_PACKAGE_libcap-bin=y
 CONFIG_PACKAGE_libustream-openssl=y
-#CONFIG_PACKAGE_lua-maxminddb=y
+CONFIG_PACKAGE_lua-maxminddb=y
 CONFIG_PACKAGE_lua-openssl=y
 CONFIG_PACKAGE_luci=y
 CONFIG_PACKAGE_luci-base=y
@@ -120,6 +120,9 @@ CONFIG_PACKAGE_luci-app-fileassistant=y
 ##services:
 CONFIG_PACKAGE_luci-app-adguardhome=y
 CONFIG_PACKAGE_luci-app-openclash=y
+#CONFIG_PACKAGE_luci-app-passwall=y
+#CONFIG_PACKAGE_luci-app-passwall2=y
+CONFIG_PACKAGE_luci-app-ssr-plus=y
 #CONFIG_PACKAGE_luci-app-unblockneteasemusic=y
 
 #CONFIG_PACKAGE_luci-app-aliyundrive-webdav=y
