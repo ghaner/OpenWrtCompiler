@@ -31,6 +31,8 @@ TIME() {
 # 拉取命令：插件编译源代码的makefile文件在仓库根目录下用git clone命令，其他用svn co命令
 # 插件源代码路径  插件编译源代码的makefile文件在仓库根目录下为仓库根目录的浏览器地址栏内的地址，否则用“trunk”代替浏览器地址栏内地址中的“tree/master”
 # 例：
+# package-url:https://github.com/用户名/luci-app-软件名称
+# package-url:https://github.com/用户名/分支名称/luci-app-软件名称
 # git clone -b branch-name package-url.git package/third-party-package/package-name
 # git clone --depth=1 package-url package/third-party-package/package-name
 # svn co package-url(/trunk or branch/branch-name/package-name) package/third-party-package/package-name
