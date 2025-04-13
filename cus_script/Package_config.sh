@@ -83,6 +83,7 @@ CONFIG_PACKAGE_kmod-nft-tproxy=y
 CONFIG_PACKAGE_kmod-tun=y
 CONFIG_PACKAGE_libcap=y
 CONFIG_PACKAGE_libcap-bin=y
+CONFIG_PACKAGE_libpcre2=y
 CONFIG_PACKAGE_libustream-openssl=y
 CONFIG_PACKAGE_lua-maxminddb=y
 CONFIG_PACKAGE_lua-openssl=y
