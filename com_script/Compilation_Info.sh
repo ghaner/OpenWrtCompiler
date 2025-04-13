@@ -89,16 +89,16 @@ fi
 echo
 TIME z " 系统空间      类型   容量  已用  可用 使用率"
 cd ../ && df -hT $PWD && cd openwrt
-echo
-TIME z "  本次编译服务器的CPU型号为[ ${CPUNAME} ]"
-echo
-TIME z "  使用核心数为[ ${CPUCORES} ], 线程数为[ $(nproc) ]"
-echo
-TIME z "  CPU编译速度:8370C>8272CL>8171M>E5系列  [ AMDEPYC776364-CoreProcessor ]"
-echo
-TIME z "  如果编译的插件较多，而又分配到E5系列的CPU，常常会因为超过免费用户连续使用6小时的限制而被取消导致编译失败，建议关闭 重新再来！"
-echo
-TIME z "  下面将使用[ $(nproc) 线程 ]编译固件"
+#echo
+#TIME z "  本次编译服务器的CPU型号为[ ${CPUNAME} ]"
+#echo
+#TIME z "  使用核心数为[ ${CPUCORES} ], 线程数为[ $(nproc) ]"
+#echo
+#TIME z "  CPU编译速度:8370C>8272CL>8171M>E5系列  [ AMDEPYC776364-CoreProcessor ]"
+#echo
+#TIME z "  如果编译的插件较多，而又分配到E5系列的CPU，常常会因为超过免费用户连续使用6小时的限制而被取消导致编译失败，建议关闭 重新再来！"
+#echo
+#TIME z "  下面将使用[ $(nproc) 线程 ]编译固件"
 echo
 if [ -n "$(ls -A "${Home}/EXT4" 2>/dev/null)" ]; then
 	echo
