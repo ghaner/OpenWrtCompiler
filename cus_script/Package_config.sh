@@ -52,18 +52,14 @@ TIME r "luci-theme-bootstrap"
 
 
 cat >> .config <<EOF
-#KERNEL_BUILD
-CONFIG_KERNEL_BUILD_DOMAIN="GitHub Actions"
-CONFIG_KERNEL_BUILD_USER="Ghaner"
-
-# IPv6:
-CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
-CONFIG_PACKAGE_ip6tables=y
-CONFIG_PACKAGE_ipv6helper=y
-
-# 增减插件时同步增减feed中相同插件的同步 https://github.com/ghaner/openwrt-package/blob/main/.github/workflows/Package%20updater.yml
-
-# dependencies:
+##Dependency
+CONFIG_BUSYBOX_DEFAULT_WGET=y
+CONFIG_BUSYBOX_DEFAULT_FEATURE_WGET_AUTHENTICATION=y
+CONFIG_BUSYBOX_DEFAULT_FEATURE_WGET_HTTPS=y
+CONFIG_BUSYBOX_DEFAULT_FEATURE_WGET_LONG_OPTIONS=y
+CONFIG_BUSYBOX_DEFAULT_FEATURE_WGET_OPENSSL=y
+CONFIG_BUSYBOX_DEFAULT_FEATURE_WGET_STATUSBAR=y
+CONFIG_BUSYBOX_DEFAULT_FEATURE_WGET_TIMEOUT=y
 CONFIG_PACKAGE_bash=y
 CONFIG_PACKAGE_ca-bundle=y
 CONFIG_PACKAGE_ca-certificates=y
@@ -73,15 +69,17 @@ CONFIG_PACKAGE_curl=y
 CONFIG_PACKAGE_diffutils=y
 CONFIG_PACKAGE_dnsmasq-full=y
 CONFIG_PACKAGE_dnsmasq-extra=y
+CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
 CONFIG_PACKAGE_ip-full=y
 CONFIG_PACKAGE_ipset=y
 CONFIG_DEFAULT_iptables=y
 CONFIG_PACKAGE_iptables-mod-extra=y
 CONFIG_PACKAGE_iptables-mod-nat-extra=y
 CONFIG_PACKAGE_iptables-mod-tproxy=y
-CONFIG_PACKAGE_ip6tables-mod-nat=y
+CONFIG_PACKAGE_kmod-ipt-nat=y
 CONFIG_PACKAGE_kmod-inet-diag=y
 CONFIG_PACKAGE_kmod-ipt-extra=y
+CONFIG_PACKAGE_kmod-nft-tproxy=y
 CONFIG_PACKAGE_kmod-tun=y
 CONFIG_PACKAGE_libcap=y
 CONFIG_PACKAGE_libcap-bin=y
@@ -95,55 +93,28 @@ CONFIG_PACKAGE_luci-lib-fs=y
 CONFIG_PACKAGE_openssl-util=y
 CONFIG_PACKAGE_ruby=y
 CONFIG_PACKAGE_ruby-yaml=y
-CONFIG_BUSYBOX_DEFAULT_WGET=y
-CONFIG_BUSYBOX_DEFAULT_FEATURE_WGET_AUTHENTICATION=y
-CONFIG_BUSYBOX_DEFAULT_FEATURE_WGET_HTTPS=y
-CONFIG_BUSYBOX_DEFAULT_FEATURE_WGET_LONG_OPTIONS=y
-CONFIG_BUSYBOX_DEFAULT_FEATURE_WGET_OPENSSL=y
-CONFIG_BUSYBOX_DEFAULT_FEATURE_WGET_STATUSBAR=y
-CONFIG_BUSYBOX_DEFAULT_FEATURE_WGET_TIMEOUT=y
+CONFIG_PACKAGE_unzip=y
 CONFIG_PACKAGE_wget-nossl=y
 CONFIG_PACKAGE_wget-ssl=y
-#CONFIG_PACKAGE_xray-core=y
-#CONFIG_PACKAGE_xray-plugin=y
-
-#application:
-##system:
-#CONFIG_PACKAGE_luci-app-autotimeset=y
-CONFIG_PACKAGE_luci-app-timedreboot=y
-#CONFIG_PACKAGE_luci-app-ttyd=y
-
-
-##NAS:
-#CONFIG_PACKAGE_luci-app-filebrowser=y
-CONFIG_PACKAGE_luci-app-fileassistant=y
-##services:
+##IPv6:
+CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
+CONFIG_PACKAGE_ip6tables=y
+CONFIG_PACKAGE_ip6tables-mod-nat=y
+CONFIG_PACKAGE_ipv6helper=y
+##App 增减插件时同步增减feed中相同插件的同步 https://github.com/ghaner/openwrt-package/blob/main/.github/workflows/Package%20updater.yml
 CONFIG_PACKAGE_luci-app-adguardhome=y
-CONFIG_PACKAGE_luci-app-openclash=y
-#CONFIG_PACKAGE_luci-app-passwall=y
-#CONFIG_PACKAGE_luci-app-passwall2=y
-CONFIG_PACKAGE_luci-app-ssr-plus=y
-#CONFIG_PACKAGE_luci-app-unblockneteasemusic=y
-
-#CONFIG_PACKAGE_luci-app-aliyundrive-webdav=y
-#CONFIG_PACKAGE_luci-app-ikoolproxy=y
-#CONFIG_PACKAGE_luci-app-jd-dailybonus=y
-#CONFIG_PACKAGE_luci-app-unblockmusic=y
-
-
-##network:
+CONFIG_PACKAGE_luci-app-fileassistant=y
+CONFIG_PACKAGE_luci-app-filebrowser=y
 CONFIG_PACKAGE_luci-app-firewall=y
+CONFIG_PACKAGE_luci-app-openclash=y
+CONFIG_PACKAGE_luci-app-passwall=y
+CONFIG_PACKAGE_luci-app-passwall2=y
+CONFIG_PACKAGE_luci-app-ssr-plus=y
+CONFIG_PACKAGE_luci-app-timedreboot=y
 CONFIG_PACKAGE_luci-app-turboacc=y
-
-# LuCI-theme
-#CONFIG_PACKAGE_luci-theme-argon=y
-#CONFIG_PACKAGE_luci-app-argon-config=y
+##Theme
 CONFIG_DEFAULT_luci-theme-bootstrap=y
-#CONFIG_PACKAGE_luci-theme-infinityfreedom=y
-
-
-#block default PACKAGE:CONFIG_PACKAGE_PACKAGE-name=n
-
+##Block default PACKAGE:CONFIG_PACKAGE_PACKAGE-name=n
 CONFIG_PACKAGE_adbyby=n
 CONFIG_PACKAGE_autosamba=n
 CONFIG_PACKAGE_ddns-scripts_aliyun=n
