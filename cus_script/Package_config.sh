@@ -132,9 +132,7 @@ CONFIG_PACKAGE_luci-app-autoreboot=n
 CONFIG_PACKAGE_luci-app-ddns=n
 CONFIG_PACKAGE_luci-app-filetransfer=n
 CONFIG_PACKAGE_luci-app-nlbwmon=n
-
-
-
+CONFIG_PACKAGE_shadowsocksr-libev=n
 CONFIG_PACKAGE_luci-app-passwall_INCLUDE_shadowsocksr_Libev_Client=n
 CONFIG_PACKAGE_luci-app-passwall_INCLUDE_shadowsocksr_Libev_Server=n
 CONFIG_PACKAGE_luci-app-passwall2_INCLUDE_shadowsocksr_Libev_Client=n
