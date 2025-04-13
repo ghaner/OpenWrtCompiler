@@ -86,9 +86,9 @@ fi
 
 
 
-echo
-TIME z " 系统空间      类型   容量  已用  可用 使用率"
-cd ../ && df -hT $PWD && cd openwrt
+#echo
+#TIME z " 系统空间      类型   容量  已用  可用 使用率"
+#cd ../ && df -hT $PWD && cd openwrt
 #echo
 #TIME z "  本次编译服务器的CPU型号为[ ${CPUNAME} ]"
 #echo
