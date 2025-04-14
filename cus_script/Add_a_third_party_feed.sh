@@ -31,8 +31,8 @@ TIME() {
 echo
 TIME y " cus_script/Add_a_third_party_feed.sh开始添加 a third-party feed:"
 git clone https://github.com/ghaner/OpenWrtPackage package/third-party-feed
-git clone https://github.com/kenzok8/openwrt-packages package/third-party-feed
-git clone https://github.com/kenzok8/small package/third-party-feed
+git clone https://github.com/kenzok8/openwrt-packages package/kenzok8-openwrt-packages
+git clone https://github.com/kenzok8/small package/kenzok8-small
 git clone https://github.com/kenzok8/golang feeds/packages/lang/golang 
 chmod -R 755 package/third-party-feed
 TIME y "添加 a third-party feed 结束" 
