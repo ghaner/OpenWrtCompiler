@@ -49,7 +49,7 @@ rm -rf ./package/lean/luci-theme-argon
 
 #TIME r "移除 golang 旧版本"
 #rm -rf feeds/packages/lang/golang
-rm -rf feeds/packages/lang/golang
+
 
 #rm -rf ./feeds/luci/applications/luci-app-aliyundrive-webdav
 
