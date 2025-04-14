@@ -29,7 +29,7 @@ TIME() {
 # 添加新package时需要在##dependencies:添加新package需要的依赖，具体依赖见源码官方仓库说明。
 #-------- ---------------------------------------------------------------------------------------------------
 #echo
-#TIME r "cus_scripts/Package_config.sh开始选择安装的插件:"
+TIME r "cus_scripts/Package_config.sh开始选择安装的插件:"
 #TIME r "luci-app-adguardhome"
 #TIME r "luci-app-cpufreq"
 #TIME r "luci-app-ttyd"
