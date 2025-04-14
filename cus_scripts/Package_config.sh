@@ -26,28 +26,23 @@ TIME() {
 # CONFIG_PACKAGE_PACKAGE-name=y
 # 禁止原生源码默认package配置:
 # CONFIG_DEFAULT_PACKAGE-name=n
-# 添加新package时需要在# dependencies:添加新package需要的依赖，具体依赖见源码官方仓库说明。
+# 添加新package时需要在##dependencies:添加新package需要的依赖，具体依赖见源码官方仓库说明。
 #-------- ---------------------------------------------------------------------------------------------------
-echo
-TIME r "cus_scripts/Package_config.sh开始选择安装的插件:"
-TIME r "luci-app-adguardhome"
-TIME r "luci-app-cpufreq"
-
+#echo
+#TIME r "cus_scripts/Package_config.sh开始选择安装的插件:"
+#TIME r "luci-app-adguardhome"
+#TIME r "luci-app-cpufreq"
 #TIME r "luci-app-ttyd"
-TIME r "luci-app-fileassistant"
-TIME r "luci-app-filebrowser"
-TIME r "luci-app-firewall"
-
+#TIME r "luci-app-fileassistant"
+#TIME r "luci-app-filebrowser"
+#TIME r "luci-app-firewall"
 #TIME r "luci-app-ikoolproxy"
-
-TIME r "luci-app-openclash"
+#TIME r "luci-app-openclash"
 #TIME r "luci-app-unblockneteasemusic"
-TIME r "luci-app-timedreboot"
-TIME r "luci-app-turboacc"
-
-
+#TIME r "luci-app-timedreboot"
+#TIME r "luci-app-turboacc"
 #TIME r "luci-theme-argon"
-TIME r "luci-theme-bootstrap"
+#TIME r "luci-theme-bootstrap"
 #TIME r "luci-theme-infinityfreedom"
 
 
