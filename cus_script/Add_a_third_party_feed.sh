@@ -24,17 +24,23 @@ TIME() {
 }
 
 #===========================================================================================================
-# add a third-party feed:git clone feed-url package/每个feed须单独一个文件夹
-# 为避免多个feed中插件冲突，最好只添加一个feed。
+# add a third-party feed:git clone feed-url package/third-party-feeds/每个feed须单独一个文件夹feed用户名-仓库名
+# 为避免多个插件编译冲突，须删除openwrt相应源代码。
+# 编译工作区路径 .yml Download Package
+#tools/   
+#toolchain/
+#feeds/luci/; feeds/packages;package/firmware;
+#package/kernel/;package/libs/;package/network/;package/system/;package/utils/;package/lean/;package/third-party feed;
+#target/linux
 #----------------------------------------------------------------------------------------------------------
  
 echo
-TIME y " cus_script/Add_a_third_party_feed.sh开始添加 a third-party feed:"
-git clone https://github.com/ghaner/OpenWrtPackage package/third-party-feed/ghaner-OpenWrtPackage
-git clone https://github.com/kenzok8/openwrt-packages package/third-party-feed/kenzok8-openwrt-packages
-git clone https://github.com/kenzok8/small package/third-party-feed/kenzok8-small
+TIME y " cus_script/Add_a_third_party_feed.sh开始添加third-party feeds:"
+git clone https://github.com/ghaner/OpenWrtPackage package/third-party-feeds/ghaner-OpenWrtPackage
+git clone https://github.com/kenzok8/openwrt-packages package/third-party-feeds/kenzok8-openwrt-packages
+git clone https://github.com/kenzok8/small package/third-party-feeds/kenzok8-small
 rm -rf feeds/packages/lang/golang
 git clone https://github.com/kenzok8/golang feeds/packages/lang/golang 
-chmod -R 755 package/third-party-feed
-TIME y "添加 a third-party feed 结束" 
+chmod -R 755 package/third-party-feeds
+TIME y "添加 third-party feeds 结束" 
 #===========================================================================================================================

@@ -23,9 +23,14 @@ TIME() {
       }
 }
 #===========================================================================================================
+#添加的third-party feed与OpenWrt中的软件包同名且需要编译third-party feeds的数据包，则需要先把OpenWrt源码中的同名软件包删除，否则会优先编译 OpenWrt 中的软件包
 # Delete original code:rm -rf code-路径
-#code-路径 feeds/*   feeds/luci/*  feeds/packages/*    
-#添加的软件包https://github.com/ghaner/openwrt-package与 OpenWrt 中已有的软件包同名的情况，则需要先把源码中的同名软件包删除，否则会优先编译 OpenWrt 中的软件包
+# 编译工作区路径 .yml Download Package
+#tools/   
+#toolchain/
+#feeds/luci/; feeds/packages;package/firmware;
+#package/kernel/;package/libs/;package/network/;package/system/;package/utils/;package/lean/;package/third-party feed;
+#target/linux
 #-----------------------------------------------------------------------------------------------------------
 
 echo
