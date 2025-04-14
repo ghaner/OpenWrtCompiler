@@ -38,7 +38,7 @@ TIME() {
 # svn co package-url(/trunk or branch/branch-name/package-name) package/third-party-package/package-name
 #---------------------------------------------------------------------------------------------------------------------------
 echo
-TIME y "cus_script/Add_third_party_package.sh开始添加 third-party package:"
+TIME y "cus_scripts/Add_third_party_package.sh开始添加 third-party package:"
 #if [[ ${REGULAR_UPDATE} == "true" ]]; then
 #    echo
 #    TIME y "添加 luci-app-autoupdate:"

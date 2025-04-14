@@ -35,7 +35,7 @@ TIME() {
 # 菜单名称:参考浏览器位置栏内名称,以.lua .htm文件中entry后面的菜单栏位置名称为准
 #----------------------------------------------------------------------------------------------------------------------------------
 echo
-TIME b "cus_script/adjust_menu_position.sh开始调整插件菜单位置:"
+TIME b "cus_scripts/adjust_menu_position.sh开始调整插件菜单位置:"
 #TIME b "调整 cpufreq 到 system菜单"
 #sed -i 's/\"services\"/\"system\"/g' feeds/luci/applications/luci-app-cpufreq/luasrc/controller/cpufreq.lua
 #TIME b "调整 文件助手 到 NAS菜单"

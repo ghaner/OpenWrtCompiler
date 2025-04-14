@@ -34,7 +34,7 @@ TIME() {
 #-----------------------------------------------------------------------------------------------------------
 
 echo
-TIME r "cus_script/Delete_original_code.sh开始删除openwrt编译源代码中不需要或与第三方feed重复或与最新官方插件冲突的代码:"
+TIME r "cus_scripts/Delete_original_code.sh开始删除openwrt编译源代码中不需要或与第三方feed重复或与最新官方插件冲突的代码:"
 
 #TIME r "删除无用主题"
 #rm -rf ./feeds/freifunk/themes

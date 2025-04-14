@@ -34,7 +34,7 @@ TIME() {
 #插件名称文件位置路径：luasrc/controller/*.lua或.po
 #===========================================================================================================
 echo   
-TIME r "cus_script/Rename_plug-in.sh开始重命名插件"       
+TIME r "cus_scripts/Rename_plug-in.sh开始重命名插件"       
 #TIME b "解除网易云音乐播放限制重命名为Unblockneteasemusic"
 #sed -i 's/"解除网易云音乐播放限制"/"Unblockneteasemusic"/g' package/third-party-feed/luci-app-unblockneteasemusic/luasrc/controller/unblockneteasemusic.lua
 #sed -i 's/"解除网易云音乐播放限制"/"Unblockneteasemusic"/g' `grep "解除网易云音乐播放限制" -rl ./`

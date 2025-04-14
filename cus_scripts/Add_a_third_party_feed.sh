@@ -35,7 +35,7 @@ TIME() {
 #----------------------------------------------------------------------------------------------------------
  
 echo
-TIME y " cus_script/Add_a_third_party_feed.sh开始添加third-party feeds:"
+TIME y " cus_scripts/Add_a_third_party_feed.sh开始添加third-party feeds:"
 git clone https://github.com/ghaner/OpenWrtPackage package/third-party-feeds/ghaner-OpenWrtPackage
 git clone https://github.com/kenzok8/openwrt-packages package/third-party-feeds/kenzok8-openwrt-packages
 git clone https://github.com/kenzok8/small package/third-party-feeds/kenzok8-small
