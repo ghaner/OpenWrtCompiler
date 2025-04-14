@@ -24,12 +24,14 @@ TIME() {
 # 在 cat >> .config <<EOF 到 EOF 之间粘贴配置 同时注释掉其他路由器型号
 #-----------------------------------------------------------------------------------------------------------
 echo
-TIME r "cus_script/Device_config.sh开始载入路由器型号:asus_rt-acrh17/ac42u"
+TIME r "cus_script/Device_config.sh开始载入路由器型号:asus_rt-ac42u" 注意:ac42u和acrh17通用一个固件,不要尝试编译acrh17会导致编译失败(.yml步骤Generate Configuration Error: Process completed with exit code 2.)
 cat >> .config <<EOF
 #MODULES:
 CONFIG_TARGET_ipq40xx=y
 CONFIG_TARGET_ipq40xx_generic=y
 CONFIG_TARGET_ipq40xx_generic_DEVICE_asus_rt-ac42u=y
+#CONFIG_TARGET_ipq40xx_DEVICE_asus_rt-acrh17=y
+#CONFIG_TARGET_BOARD="ipq40xx"
 EOF
 
 
