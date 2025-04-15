@@ -53,9 +53,9 @@ sed -i "s/192.168.1.1/192.168.10.1/g" package/base-files/files/bin/config_genera
 #TIME b "TTYD自动登录"
 #sed -i 's/login/login -f root/g' feeds/packages/utils/ttyd/files/ttyd.config
 
-echo 'src-git packages https://github.com/openwrt/packages.git;openwrt-19.07' >>feeds.conf.default
-echo 'src-git luci https://github.com/openwrt/luci.git;openwrt-19.07' >>feeds.conf.default
-echo 'src-git routing https://github.com/openwrt-routing/packages.git;openwrt-19.07' >>feeds.conf.default
-echo 'src-git telephony https://github.com/openwrt/telephony.git;openwrt-19.07' >>feeds.conf.default
+#echo 'src-git packages https://github.com/openwrt/packages.git;openwrt-19.07' >>feeds.conf.default
+#echo 'src-git luci https://github.com/openwrt/luci.git;openwrt-19.07' >>feeds.conf.default
+#echo 'src-git routing https://github.com/openwrt-routing/packages.git;openwrt-19.07' >>feeds.conf.default
+#echo 'src-git telephony https://github.com/openwrt/telephony.git;openwrt-19.07' >>feeds.conf.default
 TIME b "Modify default config 结束"
 #===========================================================================================================
