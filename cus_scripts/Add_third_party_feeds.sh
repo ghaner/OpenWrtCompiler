@@ -41,7 +41,6 @@ git clone https://github.com/kenzok8/openwrt-packages package/third-party-feeds/
 git clone https://github.com/kenzok8/small package/third-party-feeds/kenzok8-small
 rm -rf feeds/packages/lang/golang
 git clone https://github.com/kenzok8/golang feeds/packages/lang/golang 
-git clone https://github.com/python/cpython package/third-party-feeds/python
 chmod -R 755 package/third-party-feeds
 TIME y "添加 third-party feeds 结束" 
 #===========================================================================================================================
