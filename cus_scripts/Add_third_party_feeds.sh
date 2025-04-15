@@ -39,8 +39,9 @@ TIME y " cus_scripts/Add_third_party_feeds.sh开始添加third-party feeds:"
 git clone https://github.com/ghaner/OpenWrtPackage package/third-party-feeds/ghaner-OpenWrtPackage
 git clone https://github.com/kenzok8/openwrt-packages package/third-party-feeds/kenzok8-openwrt-packages
 git clone https://github.com/kenzok8/small package/third-party-feeds/kenzok8-small
+chmod -R 755 package/third-party-feeds
 rm -rf feeds/packages/lang/golang
 git clone https://github.com/kenzok8/golang feeds/packages/lang/golang 
-chmod -R 755 package/third-party-feeds
+git clone https://github.com/openwrt/packages/branch/openwrt-19.07/lang/python feeds/packages/lang/python
 TIME y "添加 third-party feeds 结束" 
 #===========================================================================================================================
