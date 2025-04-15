@@ -44,7 +44,8 @@ rm -rf feeds/packages/lang/golang
 git clone https://github.com/kenzok8/golang feeds/packages/lang/golang 
 
 rm -rf feeds/packages/lang/python
-git clone https://github.com/coolsnowwolf/branch/openwrt-19.07/lang/python feeds/packages/lang/python  
+git clone https://github.com/coolsnowwolf/packages/branch/openwrt-19.07/lang/python feeds/packages/lang/python  
+
 
 TIME y "添加 third-party feeds 结束" 
 #===========================================================================================================================
