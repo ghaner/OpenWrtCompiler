@@ -26,7 +26,7 @@ TIME() {
 echo
 TIME r "cus_scripts/Device_config.sh开始载入路由器型号:asus_rt-ac42u" 
 TIME r "注意:ac42u和acrh17通用一个固件,不要尝试编译acrh17会导致编译失败(.yml步骤Generate Configuration Error: Process completed with exit code 2.)或者编译出
-openwrt-ipq40xx-generic-8dev_habanero-dvk-initramfs-fit-uImage.itb" 
+.itb格式固件,刷机异常麻烦" 
 cat >> .config <<EOF
 #MODULES:
 CONFIG_TARGET_ipq40xx=y
