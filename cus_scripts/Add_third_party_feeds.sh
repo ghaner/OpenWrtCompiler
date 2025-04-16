@@ -25,7 +25,6 @@ TIME() {
 
 #===========================================================================================================
 # add a third-party feed:git clone feed-url package/third-party-feeds/每个feed须单独一个文件夹feed用户名-仓库名
-# git clone -b "$REPO_BRANCH" --single-branch "$REPO_URL" openwrt  主干分支时删除-b "$REPO_BRANCH" --single-branch
 # 为避免多个插件编译冲突，须删除openwrt相应源代码。
 # 编译工作区路径 .yml Download Package
 #tools/   
