@@ -30,10 +30,10 @@ openwrt-ipq40xx-generic-8dev_habanero-dvk-initramfs-fit-uImage.itb"
 cat >> .config <<EOF
 #MODULES:
 CONFIG_TARGET_ipq40xx=y
-CONFIG_TARGET_ipq40xx_generic=y
-CONFIG_TARGET_ipq40xx_generic_DEVICE_asus_rt-ac42u=y
-#CONFIG_TARGET_ipq40xx_DEVICE_asus_rt-acrh17=y
-#CONFIG_TARGET_BOARD="ipq40xx"
+#CONFIG_TARGET_ipq40xx_generic=y
+#CONFIG_TARGET_ipq40xx_generic_DEVICE_asus_rt-ac42u=y
+CONFIG_TARGET_ipq40xx_DEVICE_asus_rt-acrh17=y
+CONFIG_TARGET_BOARD="ipq40xx"
 EOF
 
 
