@@ -185,7 +185,9 @@ jobs:
         make download -j8
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
-       
+      with:
+        continue-on-error : true
+        
     - name: Compile the Firmware
       id: compile
       run: |
