@@ -45,9 +45,9 @@ sed -i "s/192.168.1.1/192.168.10.1/g" package/base-files/files/bin/config_genera
 #sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 
 
-#echo
-#TIME b "空置登录密码"
-#sed -i "/CYXluq4wUazHjmCDBCqXF/d" package/lean/default-settings/files/zzz-default-settings
+echo
+TIME b "空置登录密码"
+sed -i "/CYXluq4wUazHjmCDBCqXF/d" package/lean/default-settings/files/zzz-default-settings
 
 #echo
 #TIME b "TTYD自动登录"
